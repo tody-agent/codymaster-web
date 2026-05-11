@@ -1,0 +1,746 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CodyMaster — Your AI Coding Team in One Install</title>
+<meta name="description" content="50+ skills that turn your AI coding agent into a full senior dev team. Built for builders, not coders." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/codymaster-landing.css">
+</head>
+<body>
+
+<header class="cm-header">
+    <div class="cm-header-inner">
+      <a href="codymaster-landing.html" class="cm-logo">
+        <div class="cm-logo-mark">C</div>
+        <span class="cm-logo-text">CodyMaster</span>
+      </a>
+      <nav class="cm-nav">
+        <a href="cm-5w1h-01-why.html">Problem</a>
+        <a href="cm-5w1h-02-what.html">Solution</a>
+        <a href="cm-5w1h-06-how.html">Demo</a>
+        <a href="cm-5w1h-04-when.html">Workflow</a>
+        <a href="https://learn.todyle.com" target="_blank" rel="noopener">Course</a>
+        <a href="https://cody.todyle.com/docs/" target="_blank" rel="noopener">Guide</a>
+      </nav>
+      <div class="cm-right">
+        <a href="https://github.com/tody-agent/codymaster" class="cm-btn-gh" target="_blank" rel="noopener">GitHub</a>
+        <a href="cm-5w1h-05-where.html" class="cm-btn-free">Get Free</a>
+      </div>
+      <button class="cm-hamburger" data-hamburger aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <div class="cm-mobile-menu" data-mobile-menu>
+      <a href="cm-5w1h-01-why.html">Problem</a>
+      <a href="cm-5w1h-02-what.html">Solution</a>
+      <a href="cm-5w1h-06-how.html">Demo</a>
+      <a href="cm-5w1h-04-when.html">Workflow</a>
+      <div class="divider"></div>
+      <div class="ext-links">
+        <a href="https://learn.todyle.com" target="_blank" rel="noopener">Course</a>
+        <a href="https://cody.todyle.com/docs/" target="_blank" rel="noopener">Guide</a>
+        <a href="https://github.com/tody-agent/codymaster" target="_blank" rel="noopener">GitHub</a>
+      </div>
+  </div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">v7.0.2 &middot; 50+ skills &middot; 14 platforms</div>
+    <h1>Your AI coding agent,<br>now a <em>full team</em></h1>
+    <p class="hero-sub">One install turns your AI into a senior developer, UX designer, product manager, DevOps engineer, and tech writer — all working together.</p>
+
+    <button class="hero-install" onclick="navigator.clipboard.writeText('npm install -g codymaster && cm')">
+      npm install -g codymaster && cm
+      <span class="copy-hint">click to copy</span>
+    </button>
+    <p class="hero-note">Works with Claude Code, Cursor, Gemini, Codex, and 10 more. <a href="#install">See all platforms &rarr;</a></p>
+
+    <div class="hero-mockup">
+      <div class="mockup-bar">
+        <span class="mockup-dot r"></span>
+        <span class="mockup-dot y"></span>
+        <span class="mockup-dot g"></span>
+        <span class="mockup-title">Claude Code &mdash; CodyMaster</span>
+        <span style="width:52px"></span>
+      </div>
+      <div class="mockup-body">
+        <div><span class="prompt">You:</span> Build a booking website for my spa business. I have an old site at myspa.com but it looks terrible.</div>
+        <br>
+        <div><span class="response">AI:</span> <span class="skill-tag">cm-brainstorm-idea</span> Let me analyze your current site first...</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;I found 3 key issues: no mobile booking, unclear pricing, slow load time.</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;Here are 2 approaches:</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;A) Redesign from scratch (recommended)</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;B) Fix the existing site</div>
+        <br>
+        <div><span class="prompt">You:</span> Let's go with A.</div>
+        <br>
+        <div><span class="response">AI:</span> <span class="skill-tag">cm-design-system</span> Extracting your brand colors... Found: gold + navy.</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="skill-tag">cm-planning</span> Plan: booking, services, about, contact pages.</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="skill-tag">cm-tdd</span> Writing tests first...</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="skill-tag">cm-execution</span> Building 4 pages...</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="skill-tag">cm-quality-gate</span> All tests pass. Performance: 98/100.</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="skill-tag">cm-safe-deploy</span> Deploying to staging...</div>
+        <br>
+        <div class="success">&#10003; Done. Preview: https://staging-myspa.pages.dev</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problem" class="bg-warm">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">You installed an AI coding agent.<br>It writes code fast. But then&hellip;</h2>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">&#127912;</div>
+        <h3>Inconsistent design</h3>
+        <p>It designs differently every time. Your brand looks like 3 different companies on 3 different pages.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">&#128295;</div>
+        <h3>Fix one, break five</h3>
+        <p>It fixes one thing, breaks five others. You redo the same work over and over because there are no tests.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">&#128172;</div>
+        <h3>Goldfish memory</h3>
+        <p>It forgets everything between sessions. You re-explain your project, your brand, your decisions every single morning.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">&#128683;</div>
+        <h3>No safety net</h3>
+        <p>It writes zero tests, zero docs. Your codebase becomes a ticking time bomb that only the AI understands.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">&#128561;</div>
+        <h3>Skill soup</h3>
+        <p>You install 15 different skills and none of them talk to each other. It's a pile of tools, not a team.</p>
+      </div>
+    </div>
+
+    <div class="problem-quote">
+      AI gave me 100 hands. Without discipline, those hands created chaos.
+    </div>
+  </div>
+</section>
+
+<section id="solution">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">The Solution</div>
+      <h2 class="section-title">Not a tool. A team.</h2>
+      <p class="section-sub">CodyMaster isn't a collection of random skills. It's an operating system for your AI agent &mdash; 50+ skills that work together like a real senior team.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-role">Senior Developer</div>
+        <h3>Writes tests first, debugs systematically</h3>
+        <p>Thinks before coding. Makes surgical changes. Reviews its own work before you see it.</p>
+        <div class="team-skills">
+          <code>cm-tdd</code><code>cm-debugging</code><code>cm-code-review</code>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">UX Designer</div>
+        <h3>Extracts your brand, enforces consistency</h3>
+        <p>Pulls design tokens from your existing site or picks from 129 professional systems. Every page matches.</p>
+        <div class="team-skills">
+          <code>cm-design-system</code><code>cm-ux-master</code><code>cm-open-design</code>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">Product Manager</div>
+        <h3>Plans features, challenges assumptions</h3>
+        <p>Asks questions before building. Saves you from building the wrong thing by understanding your users first.</p>
+        <div class="team-skills">
+          <code>cm-planning</code><code>cm-brainstorm-idea</code><code>cm-jtbd</code>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">DevOps Engineer</div>
+        <h3>Safe deploys, secret scanning, right-account checks</h3>
+        <p>Multi-layer protection: tests &rarr; security scan &rarr; staging &rarr; production. No accidental deploys.</p>
+        <div class="team-skills">
+          <code>cm-safe-deploy</code><code>cm-identity-guard</code><code>cm-secret-shield</code>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">Tech Writer</div>
+        <h3>Auto-generates docs from your code</h3>
+        <p>Reads your codebase and writes the documentation you've been putting off. API refs, guides, knowledge base.</p>
+        <div class="team-skills">
+          <code>cm-dockit</code><code>cm-codeintell</code>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">Automation Lead</div>
+        <h3>Sprint pipelines, autopilot workflows</h3>
+        <p>Chains the right skills automatically. Tracks progress. Runs retrospectives. Gets better every sprint.</p>
+        <div class="team-skills">
+          <code>cm-sprint-bus</code><code>cm-autopilot</code><code>cm-status</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-warm" id="quickstart">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">Quick Start</div>
+      <h2 class="section-title">30 seconds. Three steps.</h2>
+      <p class="section-sub" style="margin:0 auto;">No config files. No setup ritual. Just describe what you want.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Install</h3>
+        <p>One command. A wizard detects every AI tool you have and installs skills to all of them.</p>
+        <code>npm install -g codymaster && cm</code>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Start coding</h3>
+        <p>Open your AI agent and say what you want in plain English. No technical jargon needed.</p>
+        <code>Build a landing page for my coffee shop</code>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Watch it work</h3>
+        <p>CodyMaster automatically chains the right skills. Planning &rarr; Design &rarr; Code &rarr; Test &rarr; Deploy.</p>
+        <code>cm-brainstorm &rarr; cm-design &rarr; cm-build &rarr; cm-deploy</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">See It Work</div>
+      <h2 class="section-title">A real conversation.<br>No code written by the human.</h2>
+      <p class="section-sub" style="margin:0 auto;">Here's a non-technical founder building a booking site. The AI caught the mobile issue before it reached production.</p>
+    </div>
+
+    <div class="convo">
+      <div class="convo-turn">
+        <div class="convo-avatar human">Y</div>
+        <div class="convo-bubble">I want to build a booking website for my spa business. I have an old website at myspa.com but it looks terrible.</div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar ai">AI</div>
+        <div class="convo-bubble">
+          <span class="skill-ref">cm-brainstorm-idea</span> Let me analyze your current site first...<br>
+          I found 3 key issues: no mobile booking, unclear pricing, slow load time.<br><br>
+          Here are 2 approaches:<br>
+          <strong>A) Redesign from scratch</strong> (recommended &mdash; your brand needs it)<br>
+          B) Fix the existing site
+        </div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar human">Y</div>
+        <div class="convo-bubble">Let's go with A.</div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar ai">AI</div>
+        <div class="convo-bubble">
+          <span class="skill-ref">cm-design-system</span> I'm extracting your brand colors from myspa.com... Found: gold + navy. Building a design system.<br>
+          <span class="skill-ref">cm-planning</span> Here's the plan: booking page, services page, about page, contact. Estimated: 30 minutes of AI work.
+        </div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar human">Y</div>
+        <div class="convo-bubble">Sounds good, do it.</div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar ai">AI</div>
+        <div class="convo-bubble">
+          <span class="skill-ref">cm-tdd</span> Writing tests first...<br>
+          <span class="skill-ref">cm-execution</span> Building 4 pages...<br>
+          <span class="skill-ref">cm-dockit</span> Generating service descriptions and FAQ docs...<br>
+          <span class="skill-ref">cm-quality-gate</span> All tests pass. Performance: 98/100.<br>
+          <span class="skill-ref">cm-safe-deploy</span> Deploying to staging...<br><br>
+          <span class="result">&#10003; Done. Preview: https://staging-myspa.pages.dev</span>
+        </div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar human">Y</div>
+        <div class="convo-bubble">The booking button is too small on mobile.</div>
+      </div>
+      <div class="convo-turn">
+        <div class="convo-avatar ai">AI</div>
+        <div class="convo-bubble">
+          <span class="skill-ref">cm-debugging</span> Found it &mdash; padding was 8px, should be 16px.<br>
+          <span class="skill-ref">cm-code-review</span> Fix looks good. No side effects.<br>
+          <span class="skill-ref">cm-safe-deploy</span> Deployed fix.<br><br>
+          <span class="result">&#10003; Fixed. Try now.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-warm" id="different">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">What Makes This Different</div>
+      <h2 class="section-title">Random skills vs. a real team</h2>
+    </div>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width:18%"></th>
+          <th style="width:41%">Random Skills</th>
+          <th style="width:41%">CodyMaster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Integration</td>
+          <td class="bad">Each skill is standalone</td>
+          <td class="good">50+ skills that chain and share memory</td>
+        </tr>
+        <tr>
+          <td>Memory</td>
+          <td class="bad">Forgets everything between sessions</td>
+          <td class="good">Remembers your project, your style, your mistakes</td>
+        </tr>
+        <tr>
+          <td>Safety</td>
+          <td class="bad">Deploy and pray</td>
+          <td class="good">Multi-layer: tests &rarr; security &rarr; staging &rarr; production</td>
+        </tr>
+        <tr>
+          <td>Design</td>
+          <td class="bad">Random UI every time</td>
+          <td class="good">Extracts your brand, enforces consistency</td>
+        </tr>
+        <tr>
+          <td>Documentation</td>
+          <td class="bad">"Maybe later"</td>
+          <td class="good">Auto-generates docs from your code</td>
+        </tr>
+        <tr>
+          <td>Self-improvement</td>
+          <td class="bad">Static &mdash; what you install is what you get</td>
+          <td class="good">Learns from feedback, gets better over time</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="audience">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Built For Builders, Not Coders</div>
+      <h2 class="section-title">You have ideas, not a CS degree.<br>That's the point.</h2>
+    </div>
+
+    <div class="audience-grid">
+      <div class="audience-col">
+        <h3>You're a good fit if you&hellip;</h3>
+        <ul class="audience-list">
+          <li class="yes"><span class="icon">&#10003;</span> Want to type a message and get a working product back</li>
+          <li class="yes"><span class="icon">&#10003;</span> Want your AI to learn from its mistakes</li>
+          <li class="yes"><span class="icon">&#10003;</span> Don't want to manually review every line of AI output</li>
+          <li class="yes"><span class="icon">&#10003;</span> Want to deploy with confidence, not prayer</li>
+        </ul>
+      </div>
+      <div class="audience-col">
+        <h3>You're NOT a good fit if you&hellip;</h3>
+        <ul class="audience-list">
+          <li class="no"><span class="icon">&#10007;</span> Enjoy doing the same setup for every project</li>
+          <li class="no"><span class="icon">&#10007;</span> Prefer slow, manual deploys with no safety net</li>
+          <li class="no"><span class="icon">&#10007;</span> Like re-explaining your codebase every morning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-warm" id="tour">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">The 10-Second Tour</div>
+      <h2 class="section-title">What CodyMaster actually does</h2>
+      <p class="section-sub" style="margin:0 auto;">Instead of listing 50+ skills, here's the journey in plain language.</p>
+    </div>
+
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-label">Before You Build</div>
+        <h3>Thinks first</h3>
+        <ul>
+          <li>Asks questions, challenges your assumptions</li>
+          <li>Plans the architecture &mdash; diagrams, data flow, edge cases</li>
+          <li>Saves you from building the wrong thing</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="phase-label">While Building</div>
+        <h3>Builds right</h3>
+        <ul>
+          <li>Enforces your design system across every page</li>
+          <li>Writes tests first &mdash; catches bugs before they exist</li>
+          <li>Debugs systematically &mdash; traces root cause, doesn't guess</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="phase-label">Before Shipping</div>
+        <h3>Ships safe</h3>
+        <ul>
+          <li>Scans for secrets &mdash; no API keys leaking to GitHub</li>
+          <li>Checks the right account &mdash; no accidental deploys</li>
+          <li>Runs quality gates &mdash; no deploy without passing tests</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="phase-label">After Shipping</div>
+        <h3>Gets better</h3>
+        <ul>
+          <li>Generates documentation from your code</li>
+          <li>Learns from feedback &mdash; gets smarter every project</li>
+          <li>Runs retrospectives &mdash; captures what worked, what didn't</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">The Design Pipeline</div>
+      <h2 class="section-title">Design as a first-class discipline</h2>
+      <p class="section-sub" style="margin:0 auto;">Your AI doesn't just write code. It enforces visual consistency across every page.</p>
+    </div>
+
+    <div class="pipeline-visual">
+      <div class="pipeline-step"><div class="label">Extract</div><div class="name">cm-open-design</div></div>
+      <div class="pipeline-arrow">&rarr;</div>
+      <div class="pipeline-step"><div class="label">Tokens</div><div class="name">cm-design-system</div></div>
+      <div class="pipeline-arrow">&rarr;</div>
+      <div class="pipeline-step"><div class="label">Validate</div><div class="name">cm-ux-master</div></div>
+      <div class="pipeline-arrow">&rarr;</div>
+      <div class="pipeline-step"><div class="label">Build</div><div class="name">cm-execution</div></div>
+      <div class="pipeline-arrow">&rarr;</div>
+      <div class="pipeline-step"><div class="label">QA</div><div class="name">cm-quality-gate</div></div>
+    </div>
+
+    <div class="pipeline-methods">
+      <div class="pipeline-method">
+        <h3>Extract from URL</h3>
+        <p>Have an existing brand or site? CodyMaster analyzes it, extracts colors, fonts, and spacing automatically.</p>
+        <div class="when">Best when: you have an existing brand</div>
+      </div>
+      <div class="pipeline-method">
+        <h3>Pick from 129 systems</h3>
+        <p>Choose from Linear, Stripe, Vercel, Notion, Apple, Tesla, and 123 more professional design systems.</p>
+        <div class="when">Best when: you want a proven aesthetic</div>
+      </div>
+      <div class="pipeline-method">
+        <h3>Choose a direction</h3>
+        <p>No brand yet? Pick from 5 curated styles: Editorial, Modern Minimal, Warm Soft, Tech Utility, Brutalist.</p>
+        <div class="when">Best when: you're starting fresh</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-warm" id="scenarios">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">Real-World Scenarios</div>
+      <h2 class="section-title">You say it. It does it.</h2>
+    </div>
+
+    <div class="scenario-grid">
+      <div class="scenario-row">
+        <div class="scenario-say">"Fix this bug"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-debugging finds root cause &rarr; cm-tdd writes test &rarr; cm-quality-gate verifies</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-say">"Build a landing page"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-brainstorm-idea &rarr; cm-design-system &rarr; cm-execution &rarr; cm-safe-deploy</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-say">"Make it look like Stripe"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-open-design extracts Stripe tokens &rarr; cm-design-system applies &rarr; cm-execution builds</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-say">"Deploy to production"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-secret-shield &rarr; cm-security-gate &rarr; cm-identity-guard &rarr; cm-safe-deploy</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-say">"What does this code do?"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-codeintell reads the codebase &rarr; cm-dockit generates docs</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-say">"Add Vietnamese support"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-safe-i18n extracts strings &rarr; translates &rarr; validates &rarr; ships</div>
+      </div>
+      <div class="scenario-row">
+        <div class="scenario-say">"Start a new project"</div>
+        <div class="scenario-arrow">&rarr;</div>
+        <div class="scenario-does">cm-project-bootstrap scaffolds &rarr; cm-planning plans &rarr; cm-execution builds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="container">
+    <div class="install-block">
+      <div class="section-label">Install</div>
+      <h2 class="section-title">One command. That's it.</h2>
+      <p class="section-sub" style="margin:0 auto 0;">A wizard detects your AI tools and installs skills to all of them. No config files. No setup ritual.</p>
+
+      <div class="install-cmd" onclick="navigator.clipboard.writeText('npm install -g codymaster && cm')">
+        <span>npm install -g codymaster && cm</span>
+        <span class="copy-icon">&#128203;</span>
+      </div>
+
+      <p style="font-size:14px; color:var(--muted); margin-bottom:32px;">Don't have Node.js?<br><code style="font-family:var(--font-mono); font-size:12px; background:var(--fg); color:var(--bg); padding:4px 10px; border-radius:6px;">bash &lt;(curl -fsSL https://raw.githubusercontent.com/tody-agent/codymaster/main/install.sh) --all --profile core</code></p>
+
+      <div class="profiles">
+        <div class="profile">
+          <h4>core</h4>
+          <div class="count">15 skills</div>
+          <p>Daily coding &mdash; planning, TDD, debug, review, deploy.</p>
+        </div>
+        <div class="profile">
+          <h4>growth</h4>
+          <div class="count">25 skills</div>
+          <p>+ design system, i18n, content factory.</p>
+        </div>
+        <div class="profile">
+          <h4>full</h4>
+          <div class="count">50+ skills</div>
+          <p>Everything &mdash; the full senior team.</p>
+        </div>
+        <div class="profile">
+          <h4>knowledge</h4>
+          <div class="count">10 skills</div>
+          <p>Docs, code intelligence, retrospectives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-warm">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">The Dashboard</div>
+      <h2 class="section-title">Visual mission control</h2>
+      <p class="section-sub" style="margin:0 auto;">Track tasks, monitor progress, see what your AI team is doing &mdash; all in one screen.</p>
+    </div>
+
+    <div class="dash-preview">
+      <div class="dash-bar">
+        <span class="title">CodyMaster Dashboard</span>
+        <span style="font-size:11px; color:oklch(55% 0.01 70);">Tasks &middot; Progress &middot; Tokens &middot; Logs</span>
+      </div>
+      <div class="dash-body">
+        <div class="row">
+          <div class="cell"><div class="lbl">Active tasks</div><div class="val">12</div></div>
+          <div class="cell"><div class="lbl">Completed</div><div class="val green">47</div></div>
+          <div class="cell"><div class="lbl">Tokens used</div><div class="val">1.2M</div></div>
+          <div class="cell"><div class="lbl">Skills active</div><div class="val">8</div></div>
+        </div>
+        <div style="background:oklch(20% 0.012 50); border-radius:6px; padding:12px 14px; margin-top:6px;">
+          <div style="font-size:10px; color:oklch(55% 0.01 70); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Current pipeline</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="background:oklch(64% 0.13 28 / 0.2); color:oklch(78% 0.1 28); padding:3px 8px; border-radius:4px; font-size:11px;">cm-planning &#10003;</span>
+            <span style="background:oklch(64% 0.13 28 / 0.2); color:oklch(78% 0.1 28); padding:3px 8px; border-radius:4px; font-size:11px;">cm-design-system &#10003;</span>
+            <span style="background:oklch(62% 0.14 155 / 0.2); color:oklch(72% 0.12 155); padding:3px 8px; border-radius:4px; font-size:11px;">cm-execution &hellip;</span>
+            <span style="background:oklch(50% 0.018 50 / 0.15); color:oklch(60% 0.01 70); padding:3px 8px; border-radius:4px; font-size:11px;">cm-quality-gate</span>
+            <span style="background:oklch(50% 0.018 50 / 0.15); color:oklch(60% 0.01 70); padding:3px 8px; border-radius:4px; font-size:11px;">cm-safe-deploy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:20px; font-family:var(--font-mono); font-size:13px; color:var(--muted);">cm dashboard start &middot; cm dashboard open</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Under the hood</h2>
+      <p class="section-sub" style="margin:0 auto;">For the curious. Skip this if you just want to build.</p>
+    </div>
+
+    <div class="hood-grid">
+      <div class="hood-item">
+        <h3>Memory System</h3>
+        <p>Your AI remembers your project across sessions. No more re-explaining your brand, your decisions, your architecture every morning.</p>
+      </div>
+      <div class="hood-item">
+        <h3>Skill Chaining</h3>
+        <p>Skills talk to each other. Planning feeds into design, design feeds into code, code feeds into tests. One pipeline, not fifteen silos.</p>
+      </div>
+      <div class="hood-item">
+        <h3>Behavioral Discipline</h3>
+        <p>Inspired by Andrej Karpathy's AI coding rules. Your AI thinks before coding, keeps things simple, makes surgical changes.</p>
+      </div>
+      <div class="hood-item">
+        <h3>Multi-Layer Safety</h3>
+        <p>Tests &rarr; security scan &rarr; staging &rarr; production. Each layer catches what the previous one missed.</p>
+      </div>
+      <div class="hood-item">
+        <h3>Self-Healing</h3>
+        <p>Skills learn from failures and improve over time. The system gets smarter with every project you ship.</p>
+      </div>
+      <div class="hood-item">
+        <h3>Multi-Platform</h3>
+        <p>Works with 14+ AI coding agents out of the box. Claude Code, Cursor, Gemini, Codex, OpenCode, Windsurf, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roots">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="section-label">Standing on Shoulders</div>
+      <h2 class="section-title">We learned from the best.<br>So you get the best.</h2>
+      <p class="section-sub" style="margin:0 auto;">Every skill in CodyMaster was forged from real open-source projects, real methodologies, and real failures. Here's where the ideas came from &mdash; and how they became your advantage.</p>
+    </div>
+
+    <div class="roots-grid">
+      <div class="root-card">
+        <div class="root-icon">&#127912;</div>
+        <h3>129 Design Systems</h3>
+        <p>Learned from <strong>nexu-io/open-design</strong> &mdash; the MCP server that gives CodyMaster access to Stripe, Linear, Vercel, Notion, Apple, Tesla, and 123 more professional design systems. Your AI can extract a brand from any URL.</p>
+        <div class="root-tag">cm-open-design &middot; cm-design-system</div>
+      </div>
+      <div class="root-card">
+        <div class="root-icon">&#129504;</div>
+        <h3>Semantic Code Intelligence</h3>
+        <p>Inspired by <strong>colbymchenry/codegraph</strong> and <strong>ahmedkhaleel2004/gitdiagram</strong>. CodyMaster's <code>cm-codeintell</code> builds a knowledge graph of your codebase &mdash; so your AI understands your project, not just your files.</p>
+        <div class="root-tag">cm-codeintell &middot; cm-dockit</div>
+      </div>
+      <div class="root-card">
+        <div class="root-icon">&#128269;</div>
+        <h3>Deep Search</h3>
+        <p>Built on <strong>tobi/qmd</strong> &mdash; BM25 + Vector + LLM semantic search. CodyMaster searches your codebase, your docs, and your memory with the same precision as a senior dev who's read every file.</p>
+        <div class="root-tag">cm-deep-search &middot; cm-continuity</div>
+      </div>
+      <div class="root-card">
+        <div class="root-icon">&#128268;</div>
+        <h3>MCP Protocol</h3>
+        <p>CodyMaster exposes <strong>18 MCP tools</strong> via the <code>cm-context</code> server &mdash; query, plan, review, deploy, search, memory. It also integrates as an MCP extension for <strong>Goose</strong> sessions.</p>
+        <div class="root-tag">cm-context &middot; 18 tools</div>
+      </div>
+      <div class="root-card">
+        <div class="root-icon">&#128218;</div>
+        <h3>Behavioral Science</h3>
+        <p>Andrej Karpathy's 4 baselines (think before coding, simplicity first, surgical changes, goal-driven). Robert C. Martin's Clean Code. TRIZ's 9 Windows. Nir Eyal's Hook Model. Every behavior is intentional.</p>
+        <div class="root-tag">cm-planning &middot; cm-tdd &middot; cm-clean-code</div>
+      </div>
+      <div class="root-card">
+        <div class="root-icon">&#127760;</div>
+        <h3>227+ Community Skills</h3>
+        <p>Patterns from <strong>Vercel</strong>, <strong>Angular</strong>, <strong>Svelte</strong>, <strong>Antfu</strong>, <strong>Expo</strong>, <strong>Cloudflare</strong>, <strong>Supabase</strong>, <strong>Neon</strong>, <strong>Three.js</strong>, <strong>GreenSock</strong>, and 200+ more. CodyMaster speaks every ecosystem's language.</p>
+        <div class="root-tag">cm-skill-evolution &middot; cm-skill-chain</div>
+      </div>
+    </div>
+
+    <div class="roots-method">
+      <div class="roots-method-label">The Method Behind It</div>
+      <div class="roots-method-grid">
+        <div class="roots-method-item">
+          <div class="roots-method-num">50+</div>
+          <div class="roots-method-text">Integrated skills across 9 categories</div>
+        </div>
+        <div class="roots-method-item">
+          <div class="roots-method-num">14+</div>
+          <div class="roots-method-text">AI platforms supported</div>
+        </div>
+        <div class="roots-method-item">
+          <div class="roots-method-num">18</div>
+          <div class="roots-method-text">MCP tools exposed for integration</div>
+        </div>
+        <div class="roots-method-item">
+          <div class="roots-method-num">129</div>
+          <div class="roots-method-text">Professional design systems available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-warm" id="story">
+  <div class="container">
+    <div class="founder">
+      <div class="section-label">Who Built This</div>
+      <div class="founder-quote">
+        50+ skills. Each skill is a lesson. Each lesson is a sleepless night. And now, you don't have to go through those nights.
+      </div>
+      <div class="founder-name">Tody Le</div>
+      <div class="founder-title">Head of Product &middot; Creator of CodyMaster</div>
+
+      <div class="founder-story">
+        <p><strong>10+ years in product. Zero CS degree.</strong> Tody Le used AI to build real products for 6 months straight. Every skill in CodyMaster was born from a real failure that cost real time and real tears.</p>
+        <p style="margin-top:16px;">"I can't write code. But in 6 months, I shipped 12 real products using AI. CodyMaster is everything I learned &mdash; so you don't have to repeat my mistakes."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-mark">C</div>
+        <span class="logo-text" style="color:oklch(95% 0.005 70)">CodyMaster</span>
+      </div>
+      <p>"CodyMaster" = "Code D&#237;" (Vietnamese: "Go code!") &mdash; just start building.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="https://cody.todyle.com/docs" target="_blank" rel="noopener">Docs</a>
+        <a href="https://cody.todyle.com/story" target="_blank" rel="noopener">Our Story</a>
+        <a href="https://www.npmjs.com/package/codymaster" target="_blank" rel="noopener">npm</a>
+        <a href="https://github.com/tody-agent/codymaster" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="https://github.com/tody-agent/codymaster/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/tody-agent/codymaster/blob/main/LICENSE" target="_blank" rel="noopener">License (ISC)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Built with &#10084;&#65039; for the vibe coding community</span>
+      <span>ISC License &middot; Free to use, modify, and distribute</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

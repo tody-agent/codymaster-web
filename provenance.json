@@ -1,0 +1,11 @@
+{
+  "source": "CodyMaster README.md (v7.0.2)",
+  "generatedAt": "2026-05-11",
+  "description": "Landing page for CodyMaster — an AI multi-platform dev kit for non-technical builders. Content sourced from the official README.md. Visual direction: warm-soft (Stripe pre-2020 / Headspace).",
+  "transformations": [
+    "Extracted product messaging from README.md",
+    "Reorganized into 14-section long-form storytelling structure",
+    "Applied warm-soft design direction with Newsreader display font and system body",
+    "Preserved all real copy: quotes, conversation demo, comparison table, scenarios"
+  ]
+}
