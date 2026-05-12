@@ -119,6 +119,66 @@
   </div>
 </section>
 
+<!-- Quick Install Prompts -->
+<section class="section section-warm">
+  <div class="section-inner">
+    <span class="section-label">Quick Install</span>
+    <h2 class="section-title">One prompt. Every tool.</h2>
+    <p class="section-sub">Copy this prompt, paste it into any AI coding agent. CodyMaster installs itself.</p>
+
+    <div class="universal-prompt">
+      <div class="prompt-card-single">
+        <div class="prompt-header-single">
+          <span class="prompt-badge">Universal Prompt</span>
+          <span class="prompt-works">Works with Claude, Codex, Cursor, Gemini, and 10+ more</span>
+        </div>
+        <div class="prompt-block-single">
+          <div class="prompt-code-single">
+            <pre>Fetch and follow instructions from https://raw.githubusercontent.com/tody-agent/codymaster/main/INSTALL.md</pre>
+          </div>
+          <button class="prompt-copy-single" onclick="copyPrompt(this)">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-or">
+      <span>or install directly</span>
+    </div>
+
+    <div class="universal-prompt">
+      <div class="prompt-card-single">
+        <div class="prompt-block-single">
+          <div class="prompt-code-single">
+            <pre>npm install -g codymaster && cm</pre>
+          </div>
+          <button class="prompt-copy-single" onclick="copyPrompt(this)">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-guides">
+      <p>Need platform-specific help?</p>
+      <div class="prompt-guides-links">
+        <a href="install-claude.html" class="guide-link">
+          <span class="guide-icon">⚡</span>
+          <span>Claude Code & Desktop</span>
+          <span class="guide-arrow">→</span>
+        </a>
+        <a href="install-codex.html" class="guide-link">
+          <span class="guide-icon">🔮</span>
+          <span>Codex</span>
+          <span class="guide-arrow">→</span>
+        </a>
+        <a href="get-started.html#platforms" class="guide-link">
+          <span class="guide-icon">📋</span>
+          <span>All Platforms</span>
+          <span class="guide-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MCP Integration -->
 <section class="section section-warm">
   <div class="section-inner">
@@ -279,20 +339,20 @@
     <p class="section-sub">Dive deeper into the other questions about CodyMaster.</p>
 
     <div class="cross-links">
-      <a href="workflow.html" class="cross-card">
-        <span class="cross-label">Workflow</span>
-        <h3>See the daily workflow</h3>
-        <p>The right moments to bring CodyMaster into your process →</p>
+      <a href="vibe-coding.html" class="cross-card">
+        <span class="cross-label">No Code</span>
+        <h3>Build without writing code</h3>
+        <p>Learn vibe coding — talk to AI and ship real products, no programming needed →</p>
       </a>
       <a href="demo.html" class="cross-card">
         <span class="cross-label">Demo</span>
         <h3>See it in action</h3>
         <p>Step-by-step guide to your first CodyMaster session →</p>
       </a>
-      <a href="the-solution.html" class="cross-card">
-        <span class="cross-label">Solution</span>
-        <h3>Understand the system</h3>
-        <p>The architecture, the philosophy, and the 50+ skills →</p>
+      <a href="skills.html" class="cross-card">
+        <span class="cross-label">Skills</span>
+        <h3>Browse all 34 skills</h3>
+        <p>Searchable catalog of every AI expert skill with use cases and prompts →</p>
       </a>
     </div>
   </div>
@@ -303,5 +363,20 @@
 
 <script src="assets/js/components.js"></script>
 <script src="assets/js/growth-sheet.js"></script>
+<script>
+// Copy prompt
+function copyPrompt(btn) {
+  var pre = btn.previousElementSibling.querySelector('pre');
+  var text = pre.textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
 </body>
 </html>

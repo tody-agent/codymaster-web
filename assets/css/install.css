@@ -1,0 +1,637 @@
+/* ═══════════════════════════════════════════════
+   CodyMaster — Installation Guide Pages
+   Shared styles for install-claude.html & install-codex-opencode.html
+   ═══════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.install-hero {
+  padding: 100px 24px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%);
+}
+
+.install-hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.install-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.install-hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.install-hero .hero-sub {
+  font-size: 18px;
+  color: var(--fg-soft);
+  max-width: 640px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.install-hero .platform-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.install-hero .platform-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.install-hero .platform-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px oklch(0% 0 0 / 0.1);
+}
+
+/* ── Section Layout ── */
+.install-section {
+  padding: 80px 24px;
+}
+
+.install-section.warm {
+  background: var(--bg-warm);
+}
+
+.install-section .section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.install-section .section-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.install-section .section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.install-section .section-sub {
+  font-size: 18px;
+  color: var(--fg-soft);
+  max-width: 640px;
+  line-height: 1.55;
+  margin-bottom: 48px;
+}
+
+/* ── Method Tabs ── */
+.method-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+
+.method-tab {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fg-soft);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.method-tab.active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 2px 8px oklch(64% 0.13 28 / 0.2);
+}
+
+.method-tab:hover:not(.active) {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* ── Method Content ── */
+.method-content {
+  display: none;
+}
+
+.method-content.active {
+  display: block;
+}
+
+/* ── Step Cards ── */
+.step-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.step-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px oklch(64% 0.13 28 / 0.06);
+}
+
+.step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-body h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.step-body p {
+  font-size: 15px;
+  color: var(--fg-soft);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.step-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Code Blocks ── */
+.code-block {
+  background: var(--fg);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 16px 0;
+  max-width: 100%;
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: oklch(18% 0.015 50);
+  border-bottom: 1px solid oklch(28% 0.01 70);
+}
+
+.code-header span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: oklch(70% 0.01 70);
+}
+
+.code-header .copy-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: oklch(70% 0.01 70);
+  background: transparent;
+  border: 1px solid oklch(35% 0.01 70);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.code-header .copy-btn:hover {
+  color: oklch(90% 0.005 70);
+  border-color: oklch(50% 0.01 70);
+}
+
+.code-header .copy-btn.copied {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+.code-block pre {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 20px;
+  color: oklch(88% 0.01 70);
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.code-block pre .comment {
+  color: oklch(55% 0.01 70);
+}
+
+.code-block pre .cmd {
+  color: oklch(78% 0.12 155);
+}
+
+.code-block pre .flag {
+  color: oklch(72% 0.1 50);
+}
+
+.code-block pre .string {
+  color: oklch(78% 0.1 50);
+}
+
+.code-block pre .key {
+  color: oklch(72% 0.12 155);
+}
+
+/* ── Info Cards ── */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color 0.2s;
+}
+
+.info-card:hover {
+  border-color: var(--accent);
+}
+
+.info-card .card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+}
+
+/* ── Skill Tags ── */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  transition: background 0.15s;
+}
+
+.skill-tag:hover {
+  background: oklch(64% 0.13 28 / 0.15);
+}
+
+/* ── Comparison Table ── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  background: var(--surface);
+}
+
+.compare-table td {
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.compare-table tr:hover td {
+  background: var(--bg-warm);
+}
+
+.compare-table .check {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.compare-table .cross {
+  color: var(--muted);
+}
+
+/* ── Alert Box ── */
+.alert-box {
+  background: var(--accent-soft);
+  border: 1px solid oklch(64% 0.13 28 / 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.alert-box .alert-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.alert-box .alert-content {
+  flex: 1;
+}
+
+.alert-box .alert-content strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.alert-box .alert-content p {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Success Box ── */
+.success-box {
+  background: var(--green-soft);
+  border: 1px solid oklch(64% 0.15 145 / 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.success-box .alert-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.success-box .alert-content {
+  flex: 1;
+}
+
+.success-box .alert-content strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.success-box .alert-content p {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Quick Start Banner ── */
+.quick-banner {
+  background: linear-gradient(135deg, var(--accent), oklch(62% 0.14 45));
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.quick-banner h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.quick-banner p {
+  font-size: 16px;
+  color: oklch(95% 0.01 70);
+  margin-bottom: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quick-banner .cmd {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 500;
+  background: oklch(20% 0.01 70);
+  color: oklch(90% 0.005 70);
+  padding: 16px 32px;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.15s;
+  border: none;
+}
+
+.quick-banner .cmd:hover {
+  transform: scale(1.02);
+}
+
+.quick-banner .cmd:active {
+  transform: scale(0.98);
+}
+
+/* ── Cross Links ── */
+.cross-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.cross-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cross-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px oklch(64% 0.13 28 / 0.08);
+}
+
+.cross-card .cross-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cross-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+
+.cross-card p {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .install-hero {
+    padding: 80px 20px 60px;
+  }
+
+  .install-section {
+    padding: 56px 20px;
+  }
+
+  .step-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .method-tabs {
+    max-width: 100%;
+  }
+
+  .method-tab {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-table {
+    font-size: 13px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 14px;
+    white-space: nowrap;
+  }
+
+  .quick-banner {
+    padding: 32px 24px;
+  }
+
+  .code-block pre {
+    font-size: 12px;
+    padding: 16px;
+  }
+}

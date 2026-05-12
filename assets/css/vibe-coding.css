@@ -1,0 +1,600 @@
+/* ═══════════════════════════════════════════════
+   CodyMaster — Vibe Coding Page Styles
+   ═══════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.vc-hero {
+  padding: 100px 24px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.vc-hero .section-label { margin-bottom: 16px; }
+.vc-hero .section-title {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vc-hero .section-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent), oklch(72% 0.12 155));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.vc-hero .section-sub {
+  margin: 0 auto 32px;
+  max-width: 640px;
+  font-size: 19px;
+}
+.vc-hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+/* Chat Demo */
+.vc-chat-demo {
+  max-width: 580px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.vc-chat-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--bg-warm);
+  border-bottom: 1px solid var(--border);
+}
+.vc-chat-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+.vc-chat-dot--r { background: #ef4444; }
+.vc-chat-dot--y { background: #f59e0b; }
+.vc-chat-dot--g { background: #22c55e; }
+.vc-chat-bar span {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+.vc-chat-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.vc-msg {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.vc-msg--user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+.vc-msg--ai {
+  align-self: flex-start;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+}
+.vc-msg-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Analogy Section ── */
+.vc-analogy-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.vc-analogy-card {
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  text-align: center;
+  background: var(--surface);
+}
+.vc-analogy-card--old {
+  border-color: oklch(60% 0.14 20 / 0.2);
+  background: var(--red-soft);
+}
+.vc-analogy-card--new {
+  border-color: oklch(62% 0.14 155 / 0.2);
+  background: var(--green-soft);
+}
+.vc-analogy-icon { font-size: 40px; margin-bottom: 12px; }
+.vc-analogy-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.vc-analogy-card p {
+  font-size: 15px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+}
+.vc-analogy-arrow {
+  font-size: 32px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── Pipeline / 5-Step Flow ── */
+.vc-pipeline {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.vc-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 0;
+  position: relative;
+}
+.vc-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 68px;
+  bottom: -24px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+}
+.vc-step-num {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), oklch(72% 0.12 45));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+.vc-step-body h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+.vc-step-body p {
+  font-size: 15px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+}
+.vc-step-example {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: var(--fg);
+  color: oklch(80% 0.08 170);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  border-left: 3px solid var(--accent);
+}
+
+/* ── Prompt Cards ── */
+.vc-prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.vc-prompt-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.vc-prompt-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.vc-prompt-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: block;
+}
+.vc-prompt-text {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--fg);
+  color: oklch(80% 0.08 170);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  border-left: 3px solid var(--accent);
+  position: relative;
+}
+.vc-prompt-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: oklch(30% 0.01 50);
+  border: 1px solid oklch(40% 0.01 50);
+  color: oklch(80% 0.01 70);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.vc-prompt-copy:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.vc-prompt-copy.copied {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}
+.vc-prompt-result {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.5;
+}
+.vc-prompt-result strong { color: var(--fg); }
+
+/* ── Cost Comparison Table ── */
+.vc-cost-table {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.vc-cost-table th,
+.vc-cost-table td {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 1px solid var(--border);
+}
+.vc-cost-table th {
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.vc-cost-table tr:last-child td { border-bottom: none; }
+.vc-cost-table td:first-child {
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+.vc-cost-table .col-before {
+  color: oklch(55% 0.14 20);
+}
+.vc-cost-table .col-after {
+  color: oklch(55% 0.14 155);
+}
+.vc-cost-table tbody tr:nth-child(even) td {
+  background: var(--bg-warm);
+}
+
+/* ── Mistake/Fix Cards ── */
+.vc-mistakes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.vc-mistake-card {
+  background: var(--surface);
+  border: 1px solid oklch(60% 0.14 20 / 0.15);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.vc-mistake-card h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+.vc-mistake-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.vc-mistake-label--wrong { color: oklch(60% 0.14 20); }
+.vc-mistake-label--right { color: oklch(55% 0.14 155); }
+.vc-mistake-wrong {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: oklch(60% 0.14 20);
+  background: var(--red-soft);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.vc-mistake-right {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: oklch(55% 0.14 155);
+  background: var(--green-soft);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+}
+
+/* ── Tips Grid ── */
+.vc-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.vc-tip-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.vc-tip-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+.vc-tip-card h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+.vc-tip-card p {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+}
+.vc-tip-card code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+/* ── FAQ Accordion ── */
+.vc-faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.vc-faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface);
+}
+.vc-faq-item summary {
+  padding: 18px 22px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 0.12s;
+}
+.vc-faq-item summary::-webkit-details-marker { display: none; }
+.vc-faq-item summary::marker { display: none; content: ''; }
+.vc-faq-item summary:hover {
+  background: var(--accent-soft);
+}
+.vc-faq-item summary::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+.vc-faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.vc-faq-answer {
+  padding: 0 22px 18px;
+  font-size: 15px;
+  color: var(--fg-soft);
+  line-height: 1.7;
+}
+.vc-faq-answer a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ── CTA Strip ── */
+.vc-cta {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--bg-warm);
+  position: relative;
+}
+.vc-cta .section-title {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vc-cta .section-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent), oklch(72% 0.12 155));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.vc-cta .section-sub {
+  margin: 0 auto 32px;
+}
+.vc-cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Cross-links ── */
+.vc-crosslinks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.vc-crosslink {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.vc-crosslink:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.vc-crosslink-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  display: block;
+}
+.vc-crosslink-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+.vc-crosslink-desc {
+  font-size: 13px;
+  color: var(--fg-soft);
+  line-height: 1.45;
+}
+
+/* ── Utility ── */
+.vc-section-alt {
+  background: var(--bg-warm);
+}
+
+/* ═══════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .vc-analogy-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .vc-analogy-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+  .vc-cost-table th,
+  .vc-cost-table td {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vc-hero {
+    padding: 80px 20px 60px;
+  }
+  .vc-hero .section-sub {
+    font-size: 17px;
+  }
+  .vc-prompts-grid,
+  .vc-mistakes-grid {
+    grid-template-columns: 1fr;
+  }
+  .vc-tips-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .vc-cost-table {
+    font-size: 13px;
+  }
+  .vc-cost-table th,
+  .vc-cost-table td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vc-hero {
+    padding: 68px 16px 48px;
+  }
+  .vc-tips-grid {
+    grid-template-columns: 1fr;
+  }
+  .vc-crosslinks-grid {
+    grid-template-columns: 1fr;
+  }
+  .vc-step {
+    gap: 14px;
+  }
+  .vc-step-num {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .vc-step:not(:last-child)::after {
+    left: 19px;
+    top: 60px;
+  }
+  .vc-prompt-text {
+    font-size: 12px;
+  }
+  .vc-chat-demo {
+    max-width: 100%;
+  }
+}

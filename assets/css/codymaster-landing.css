@@ -82,6 +82,14 @@
     flex: 1; text-align: center;
     font-family: var(--font-mono); font-size: 12px; color: oklch(60% 0.01 70);
   }
+  .mockup-body {
+    padding: 28px 32px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: oklch(82% 0.01 70);
+    line-height: 1.7;
+    text-align: left;
+  }
   .mockup-body .prompt { color: oklch(70% 0.05 155); }
   .mockup-body .response { color: oklch(88% 0.008 70); }
   .mockup-body .skill-tag {
@@ -407,7 +415,6 @@
     background: oklch(18% 0.015 50);
   }
   .dash-bar .title { font-weight: 600; font-size: 12px; color: oklch(90% 0.005 70); }
-  .dash-
   .dash-body .row { display: flex; gap: 14px; margin-bottom: 10px; }
   .dash-body .cell {
     background: oklch(20% 0.012 50);

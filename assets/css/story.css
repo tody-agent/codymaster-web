@@ -1,0 +1,474 @@
+/* ═══════════════════════════════════════════════
+   CodyMaster — Story Page Styles
+   Timeline layout + chapter cards + philosophy
+   ═══════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.story-hero {
+  padding: 100px 0 64px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%);
+}
+.story-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.story-hero__sub {
+  font-size: 19px;
+  color: var(--fg-soft);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* ── Founder Intro ── */
+.story-intro {
+  padding: 48px 0 64px;
+}
+.story-intro__card {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.story-intro__avatar {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.story-intro__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2.5vw, 22px);
+  line-height: 1.55;
+  color: var(--fg);
+  border: none;
+  padding: 0;
+}
+
+/* ── Timeline ── */
+.story-timeline {
+  padding: 40px 0 80px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--border) 0%,
+    var(--accent) 30%,
+    var(--accent) 70%,
+    var(--border) 100%
+  );
+}
+
+/* ── Chapter ── */
+.timeline__chapter {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  padding-bottom: 48px;
+}
+
+.timeline__chapter:last-child {
+  padding-bottom: 0;
+}
+
+/* Marker (number + line connector) */
+.timeline__marker {
+  position: relative;
+  flex-shrink: 0;
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline__number {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline__chapter:hover .timeline__number {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* Card */
+.timeline__card {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.timeline__card::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transform: rotate(45deg);
+}
+
+.timeline__chapter:hover .timeline__card {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 32px oklch(22% 0.02 50 / 0.06);
+  transform: translateY(-2px);
+}
+
+.timeline__title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--fg);
+}
+
+.timeline__body p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--fg-soft);
+  margin-bottom: 12px;
+}
+.timeline__body p:last-child {
+  margin-bottom: 0;
+}
+.timeline__body strong {
+  color: var(--fg);
+}
+
+/* Pull quotes */
+.timeline__quote {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--fg);
+}
+
+.timeline__quote--danger {
+  border-left-color: oklch(60% 0.14 20);
+  background: var(--red-soft);
+}
+
+.timeline__quote--heart {
+  border-left-color: oklch(62% 0.14 155);
+  background: var(--green-soft);
+}
+
+/* Skill tags */
+.timeline__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid oklch(64% 0.13 28 / 0.15);
+  transition: all 0.2s;
+}
+.skill-tag:hover {
+  background: oklch(64% 0.13 28 / 0.15);
+}
+
+/* Highlight chapter (Chapter 3 — the painful one) */
+.timeline__chapter--highlight .timeline__number {
+  border-color: oklch(60% 0.14 20);
+  color: oklch(60% 0.14 20);
+}
+.timeline__chapter--highlight .timeline__card {
+  border-color: oklch(60% 0.14 20 / 0.2);
+  background: oklch(60% 0.14 20 / 0.02);
+}
+
+/* Gratitude chapter */
+.timeline__chapter--gratitude .timeline__number {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* ── Brand Meaning / "Code Đi" Pull Quote ── */
+.story-brand-meaning {
+  padding: 80px 0;
+  text-align: center;
+}
+.story-brand-meaning__quote {
+  max-width: 600px;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
+}
+.story-brand-meaning__icon {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+.story-brand-meaning__quote p {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.4;
+  color: var(--fg);
+  margin-bottom: 12px;
+}
+.story-brand-meaning__quote strong {
+  color: var(--accent);
+}
+.story-brand-meaning__quote footer {
+  font-size: 16px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Philosophy Section ── */
+.story-philosophy {
+  padding: 80px 0;
+}
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.philosophy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.philosophy-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 12px 40px oklch(22% 0.02 50 / 0.06);
+}
+.philosophy-card__icon {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.philosophy-card__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--fg);
+}
+.philosophy-card__desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg-soft);
+}
+.philosophy-card__desc strong {
+  color: var(--fg);
+}
+
+/* ── Stats Section ── */
+.story-stats {
+  padding: 80px 0;
+  text-align: center;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 16px;
+  transition: all 0.3s ease;
+}
+.stat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px oklch(22% 0.02 50 / 0.06);
+}
+.stat-card__number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--accent), oklch(72% 0.12 45));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.stat-card__label {
+  font-size: 14px;
+  color: var(--fg-soft);
+  line-height: 1.4;
+}
+
+/* ── Closing Section ── */
+.story-closing {
+  padding: 80px 0;
+  text-align: center;
+}
+.story-closing__text {
+  font-size: 18px;
+  color: var(--fg-soft);
+  max-width: 700px;
+  margin: 0 auto 16px;
+  line-height: 1.6;
+}
+.story-closing__question {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 24px 28px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.5;
+  color: var(--fg);
+  text-align: left;
+}
+.story-closing__punchline {
+  font-size: 17px;
+  color: var(--fg-soft);
+  max-width: 700px;
+  margin: 0 auto 12px;
+  line-height: 1.6;
+}
+
+/* ── CTA Section ── */
+.story-cta {
+  padding: 80px 0;
+  text-align: center;
+}
+.story-cta__buttons {
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+.story-cta__links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.story-cta__links a {
+  font-size: 14px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.story-cta__links a:hover {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Timeline → single column */
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline__marker {
+    width: 40px;
+  }
+  .timeline__number {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .timeline__chapter {
+    gap: 16px;
+    padding-bottom: 36px;
+  }
+  .timeline__card {
+    padding: 24px 20px;
+  }
+  .timeline__card::before {
+    left: -7px;
+    top: 16px;
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Philosophy → stack */
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Stats → 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CTA links stack */
+  .story-cta__links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-hero {
+    padding: 80px 0 48px;
+  }
+  .timeline__card {
+    padding: 20px 16px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -24,7 +24,12 @@
 .section-header{text-align:center;margin-bottom:48px}
 .section-header .section-sub{margin:0 auto}
   /* ── Big Idea (two-col) ── */
-  .big-ide
+  .big-idea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
   .big-idea-text h2 { margin-bottom: 20px; }
   .big-idea-text p { color: var(--fg-soft); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
   .big-idea-text p:last-child { margin-bottom: 0; }
@@ -306,4 +311,22 @@
   .cross-card p {
     font-size: 14px;
     line-height: 1.55;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .big-idea { grid-template-columns: 1fr; gap: 32px; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .arch-grid { grid-template-columns: repeat(2, 1fr); }
+    .know-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-row { grid-template-columns: repeat(3, 1fr); }
+    .cross-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .cat-grid { grid-template-columns: 1fr; }
+    .arch-grid { grid-template-columns: 1fr; }
+    .know-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .pipeline-row { flex-direction: column; align-items: flex-start; gap: 12px; }
   }

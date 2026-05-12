@@ -1,13 +1,12 @@
 /**
  * CodyMaster — Component Injection
  * Fetches header.html + footer.html and injects them into mount points.
- * Active nav state is driven by <body data-page="why|what|who|when|where|how|home">
+ * Active nav state is driven by <body data-page="...">
  */
 (function () {
   'use strict';
 
   const BASE = (function () {
-    // Detect base path: works both at root and in subdirectories
     const scripts = document.querySelectorAll('script[src]');
     for (const s of scripts) {
       const m = s.src.match(/(.*\/assets\/js\/)/);
@@ -18,14 +17,20 @@
 
   const PAGE = document.body.dataset.page || '';
 
+  // Maps page IDs to data-nav values for active highlighting
   const PAGE_NAV_MAP = {
-    why:   'why',
-    what:  'what',
-    who:   'who',
-    when:  'when',
-    where: 'where',
-    how:   'how',
-    home:  '',
+    why:        'why',
+    what:       'what',
+    who:        'who',
+    when:       'when',
+    where:      'where',
+    how:        'how',
+    home:       '',
+    story:      'story',
+    vibe:       'vibe',
+    skills:     'skills',
+    methodology:'methodology',
+    compare:    'compare',
   };
 
   function applyActiveNav(root) {
@@ -46,6 +51,17 @@
     });
     document.addEventListener('click', function () {
       menu.classList.remove('open');
+    });
+  }
+
+  function initMobileAccordion() {
+    document.querySelectorAll('[data-mobile-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var sub = btn.nextElementSibling;
+        if (!sub) return;
+        btn.classList.toggle('open');
+        sub.classList.toggle('open');
+      });
     });
   }
 
@@ -99,6 +115,7 @@
     // Apply active nav after header is in DOM
     applyActiveNav(document);
     initHamburger();
+    initMobileAccordion();
     initScrollProgress();
   }
 
