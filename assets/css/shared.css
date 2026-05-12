@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════
+   CodyMaster — Shared Section & Footer Styles
+   Loaded on ALL pages alongside base.css
+   ═══════════════════════════════════════════════ */
+
+/* ── Section Primitives ── */
+section { padding: 80px 0; }
+.bg-warm { background: var(--bg-warm); }
+.bg-surface { background: var(--surface); }
+
+.section-label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--accent); margin-bottom: 12px;
+  display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600; line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 18px; color: var(--fg-soft);
+  max-width: 600px; line-height: 1.55;
+}
+.section-header { margin-bottom: 48px; }
+
+/* ── Footer ── */
+footer {
+  background: var(--fg);
+  color: oklch(80% 0.01 70);
+  padding: 48px 0 36px;
+}
+footer .container {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 32px;
+}
+.footer-brand .logo { display: flex; align-items: center; gap: 10px; }
+.footer-brand .logo-mark {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--accent), oklch(72% 0.12 45));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-family: var(--font-mono); font-weight: 700; font-size: 14px;
+}
+.footer-brand .logo-text { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: oklch(95% 0.005 70); }
+.footer-brand p { font-size: 14px; margin-top: 8px; max-width: 280px; opacity: 0.7; }
+.footer-links { display: flex; gap: 48px; }
+.footer-col h4 {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: oklch(60% 0.01 70); margin-bottom: 14px;
+}
+.footer-col a {
+  display: block; font-size: 14px;
+  color: oklch(80% 0.01 70); margin-bottom: 10px;
+  transition: color 0.15s;
+}
+.footer-col a:hover { color: oklch(95% 0.005 70); text-decoration: none; }
+.footer-bottom {
+  width: 100%;
+  border-top: 1px solid oklch(30% 0.01 70);
+  margin-top: 32px; padding-top: 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  section { padding: 56px 0; }
+  .footer-links { gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}

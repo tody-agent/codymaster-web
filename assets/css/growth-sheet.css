@@ -1,0 +1,85 @@
+/* ═══════════════════════════════════════════════
+   CodyMaster — Exit Intent Growth Sheet
+   cm-growth-hacking: Bottom sheet with install CTA
+   Triggers: exit-intent (mouseleave top) OR 45s timer
+   Respects: sessionStorage dismiss (max 1x/session)
+   ═══════════════════════════════════════════════ */
+
+.cm-sheet-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: oklch(10% 0.01 50 / 0.5);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.cm-sheet-overlay.open { opacity: 1; pointer-events: all; }
+
+.cm-sheet {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 1001;
+  background: var(--surface, #fff);
+  border-top: 1px solid var(--border, #e5e7eb);
+  border-radius: 20px 20px 0 0;
+  padding: 8px 0 0;
+  max-width: 600px; margin: 0 auto;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 -8px 48px oklch(22% 0.02 50 / 0.15);
+}
+.cm-sheet.open { transform: translateY(0); }
+
+.cm-sheet-handle {
+  width: 40px; height: 4px; border-radius: 2px;
+  background: var(--border, #e5e7eb);
+  margin: 0 auto 20px;
+}
+.cm-sheet-body { padding: 0 28px 36px; }
+.cm-sheet-eyebrow {
+  font-family: var(--font-mono, monospace); font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--accent, oklch(64% 0.13 28));
+  margin-bottom: 10px;
+}
+.cm-sheet-title {
+  font-family: var(--font-display, serif);
+  font-size: clamp(22px, 5vw, 28px); font-weight: 600;
+  line-height: 1.2; letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.cm-sheet-sub {
+  font-size: 15px; color: var(--fg-soft, #666);
+  line-height: 1.55; margin-bottom: 24px;
+}
+.cm-sheet-install {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--fg, #1a1a1a); color: var(--bg, #fafaf8);
+  font-family: var(--font-mono, monospace); font-size: 13px; font-weight: 500;
+  padding: 14px 20px; border-radius: 10px;
+  margin-bottom: 14px; cursor: pointer; border: none; width: 100%;
+  text-align: left; transition: opacity 0.15s;
+}
+.cm-sheet-install:hover { opacity: 0.88; }
+.cm-sheet-install .cm-copy-hint {
+  font-size: 11px; opacity: 0.5; font-family: var(--font-body, sans-serif);
+}
+.cm-sheet-ctas {
+  display: flex; gap: 10px;
+}
+.cm-sheet-btn-primary {
+  flex: 1; padding: 12px 20px; border-radius: 10px;
+  background: var(--accent, oklch(64% 0.13 28)); color: white;
+  font-size: 14px; font-weight: 600; text-align: center;
+  text-decoration: none; transition: opacity 0.15s;
+}
+.cm-sheet-btn-primary:hover { opacity: 0.85; text-decoration: none; }
+.cm-sheet-btn-ghost {
+  padding: 12px 20px; border-radius: 10px;
+  border: 1px solid var(--border, #e5e7eb);
+  color: var(--fg-soft, #666); font-size: 14px;
+  background: none; cursor: pointer; transition: border-color 0.15s;
+}
+.cm-sheet-btn-ghost:hover { border-color: var(--fg-soft, #666); }
+
+@media (max-width: 600px) {
+  .cm-sheet-ctas { flex-direction: column; }
+}

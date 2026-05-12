@@ -1,0 +1,33 @@
+# CodyMaster — AI-Readable Site Index
+# For LLMs, AI crawlers, and automated research tools
+# See: https://llmstxt.org
+
+# CodyMaster
+> An operating system for your AI coding agent. 50+ skills that turn any AI agent into a senior dev team.
+
+## What is CodyMaster?
+CodyMaster is a skill kit for AI coding agents (Claude Code, Cursor, Gemini CLI, Codex, Windsurf, and 10+ others).
+Install once. Your AI gets: TDD discipline, systematic debugging, design systems, safe deploys, working memory, and self-improvement.
+
+## Install
+```
+npm install -g codymaster && cm
+```
+
+## Pages
+
+- [Home](https://codymaster.todyle.com/): Full overview, install, demo, design pipeline, founder story
+- [Why it exists](https://codymaster.todyle.com/the-problem.html): The 5 problems with raw AI coding (goldfish memory, skill soup, no safety net, inconsistent design, fix-one-break-five)
+- [What it does](https://codymaster.todyle.com/the-solution.html): 50+ skills, 9 categories, full feature list
+- [Who it's for](https://codymaster.todyle.com/for-teams.html): Solo founders, PMs, designers, small teams — fit check
+- [When to use it](https://codymaster.todyle.com/workflow.html): Sprint workflow, phase-by-phase usage guide
+- [Where to get it](https://codymaster.todyle.com/get-started.html): Install instructions, all platforms, profiles
+- [How to start](https://codymaster.todyle.com/demo.html): Step-by-step demo, first project walkthrough
+
+## Key Facts
+- Version: 7.0.2
+- License: ISC (free to use, modify, distribute)
+- GitHub: https://github.com/tody-agent/codymaster
+- npm: https://www.npmjs.com/package/codymaster
+- Docs: https://cody.todyle.com/docs/
+- Creator: Tody Le — 10+ years product management, 0 CS degree, shipped 12 products with AI

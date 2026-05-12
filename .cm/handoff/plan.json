@@ -1,0 +1,14 @@
+{
+  "schema": "plan@1",
+  "goal": "Refactor CodyMaster LandingPage to share header/footer via JS injection; add full SEO suite; add exit-intent growth hacking bottom sheet",
+  "decisions": [
+    "Use JS fetch injection (Option A) — no build tool required, works with Cloudflare Pages static deploy",
+    "Active nav state driven by data-page attribute on <body> per page",
+    "CSS tokens lifted to base.css :root so ALL pages share same design tokens",
+    "Footer CSS extracted to shared.css (eliminates ~200 lines of duplication)",
+    "SEO: full OG + Twitter + JSON-LD + canonical + robots on every page",
+    "Growth hacking: exit-intent bottom sheet (mouseleave top OR 45s timer), sessionStorage dismiss"
+  ],
+  "first_tasks": ["1.1", "1.2", "2.1"],
+  "openspec_path": "openspec/changes/refactor-shared-components/"
+}

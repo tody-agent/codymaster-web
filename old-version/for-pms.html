@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en" data-lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VieNeu-TTS — Động Cơ Giọng Nói Tối Thượng</title>
+  <meta name="description" content="Clone giọng nói tức thì trong 3 giây. Đọc song ngữ Anh-Việt mượt mà. Động cơ Turbo siêu nhẹ chạy mượt trên mọi thiết bị.">
+  <meta property="og:title" content="VieNeu-TTS — Clone giọng nói trong 3 giây">
+  <meta property="og:description" content="Thay thế hoàn toàn API đắt đỏ với hệ thống TTS AI chạy trực tiếp trên thiết bị của bạn.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+  <link rel="stylesheet" href="css/kit.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JCHYEW645C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JCHYEW645C');
+</script>
+
+</head>
+<body>
+
+  <!-- ═══════════╗ NAVIGATION ╔═══════════ -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-icon">⚡</span>
+      <span>CodyMaster</span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">
+      <li class="nav-dropdown">
+        <button class="nav-dropdown__toggle">
+          <span data-i18n="nav.whyUs">Why Us</span>
+          <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+        </button>
+        <div class="nav-dropdown__menu">
+          <a href="why-cody-master.html" class="nav-dropdown__item"><span class="lang-flag">💡</span> <span data-i18n="nav.whyCodyMaster">Why CodyMaster</span></a>
+          <a href="skills.html" class="nav-dropdown__item"><span class="lang-flag">🧠</span> <span data-i18n="nav.skills">Skills</span></a>
+          <a href="vs-scrum.html" class="nav-dropdown__item"><span class="lang-flag">🤺</span> <span data-i18n="nav.vsScrum">vs Scrum</span></a>
+          <a href="vs-others.html" class="nav-dropdown__item"><span class="lang-flag">🔄</span> <span data-i18n="nav.vsOthers">vs Others</span></a>
+          <a href="story.html" class="nav-dropdown__item"><span class="lang-flag">📖</span> <span data-i18n="nav.story">Our Story</span></a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown__toggle">
+          <span data-i18n="nav.how">How</span>
+          <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+        </button>
+        <div class="nav-dropdown__menu">
+          <a href="vibe-coding.html" class="nav-dropdown__item"><span class="lang-flag">🎨</span> <span data-i18n="nav.vibeCoding">Vibe Coding</span></a>
+          <a href="playbook.html" class="nav-dropdown__item"><span class="lang-flag">📖</span> <span data-i18n="nav.useCases">Use Cases</span></a>
+          <a href="parallel-coding.html" class="nav-dropdown__item"><span class="lang-flag">⚡</span> <span data-i18n="nav.parallelCoding">Parallel Coding</span></a>
+          <a href="cli.html" class="nav-dropdown__item"><span class="lang-flag">⌨️</span> <span data-i18n="nav.cli">CLI</span></a>
+        </div>
+      </li>
+      <li><a href="/docs/" class="nav__link" data-i18n="nav.docs">Docs</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown__toggle">
+          <span data-i18n="nav.personas">For You</span>
+          <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+        </button>
+        <div class="nav-dropdown__menu">
+          <a href="for-founders.html" class="nav-dropdown__item"><span class="lang-flag">🚀</span> <span data-i18n="personas.cards.0.title">For Founders</span></a>
+          <a href="for-cmos.html" class="nav-dropdown__item"><span class="lang-flag">📢</span> <span data-i18n="personas.cards.1.title">For CMOs</span></a>
+          <a href="for-pms.html" class="nav-dropdown__item"><span class="lang-flag">📋</span> <span data-i18n="personas.cards.2.title">For PMs</span></a>
+          <a href="for-tech-teams.html" class="nav-dropdown__item"><span class="lang-flag">💻</span> <span data-i18n="personas.cards.3.title">For Tech Teams</span></a>
+          <a href="for-designers.html" class="nav-dropdown__item"><span class="lang-flag">🎨</span> <span data-i18n="personas.cards.4.title">For Designers</span></a>
+          <a href="for-claw-family.html" class="nav-dropdown__item"><span class="lang-flag">🦞</span> <span data-i18n="personas.cards.5.title">For Claw Family</span></a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav__controls">
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn" id="lang-toggle" aria-label="Select language" aria-expanded="false">
+            <span class="lang-btn-icon">🌍</span>
+            <span class="lang-btn-text" id="lang-btn-text">EN</span>
+            <span class="lang-btn-caret">▾</span>
+          </button>
+          <div class="lang-menu" id="lang-menu">
+            <button class="lang-option" data-lang="en">
+              <span class="lang-flag">🇬🇧</span> <span class="lang-name">English</span>
+            </button>
+            <button class="lang-option" data-lang="vi">
+              <span class="lang-flag">🇻🇳</span> <span class="lang-name">Tiếng Việt</span>
+            </button>
+            <button class="lang-option" data-lang="zh">
+              <span class="lang-flag">🇨🇳</span> <span class="lang-name">中文</span>
+            </button>
+            <button class="lang-option" data-lang="ru">
+              <span class="lang-flag">🇷🇺</span> <span class="lang-name">Русский</span>
+            </button>
+            <button class="lang-option" data-lang="ko">
+              <span class="lang-flag">🇰🇷</span> <span class="lang-name">한국어</span>
+            </button>
+            <button class="lang-option" data-lang="hi">
+              <span class="lang-flag">🇮🇳</span> <span class="lang-name">हिन्दी</span>
+            </button>
+          </div>
+        </div>
+        <a href="start.html" class="nav__cta"   <!-- ═══════════╗ HERO - VIENEU TTS ╔═══════════ -->
+  <section class="persona-hero" id="personaHero">
+    <div class="bg-mesh bg-mesh--cyan"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="persona-hero__svg-bg" style="opacity:0.1; filter:blur(40px);">
+        <!-- Abstract wave shapes -->
+    </div>
+
+    <div class="persona-hero__content">
+      <div class="persona-hero__badge">
+        <span class="persona-hero__badge-dot"></span>
+        🚀 Ra mắt VieNeu-TTS-v2 Turbo — Nhẹ. Nhanh. Miễn phí.
+      </div>
+      <h1 class="persona-hero__title" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">API Giọng Nói Đang Đốt Sạch Ngân Sách Của Bạn?</h1>
+      <p class="persona-hero__subtitle" style="font-size: 1.25rem;">Khám phá VieNeu-TTS: Công nghệ AI <strong>Clone giọng nói bất kỳ chỉ trong 3 giây</strong> và đọc mượt mà <strong>Song ngữ Anh-Việt</strong>.<br>Chạy trực tiếp trên máy của bạn. Hoàn toàn Offline. Không phí API hàng tháng.</p>
+
+      <div class="persona-hero__stats" style="margin-top: 40px;">
+        <div class="persona-hero__stat">
+          <span class="persona-hero__stat-num">3s</span>
+          <span class="persona-hero__stat-label">Thời Gian Clone Giọng</span>
+        </div>
+        <div class="persona-hero__stat">
+          <span class="persona-hero__stat-num">$0</span>
+          <span class="persona-hero__stat-label">Chi Phí API Hàng Tháng</span>
+        </div>
+        <div class="persona-hero__stat">
+          <span class="persona-hero__stat-num">100%</span>
+          <span class="persona-hero__stat-label">Bảo Mật Offline</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ FOMO SOCIAL PROOF STRIP ╔═══════════ -->
+  <section class="persona-fomo" id="personaFomo">
+    <div class="persona-fomo__inner">
+      <div class="persona-fomo__item">
+        <span class="persona-fomo__live-dot"></span>
+        <span>Mô hình nén (Turbo GGUF) — Chạy mượt cả trên CPU và Mobile</span>
+      </div>
+      <div class="persona-fomo__item">
+        <span class="persona-fomo__item-icon">🎙️</span>
+        <span>Giọng nói tự nhiên chất lượng cao chuẩn studio 24kHz</span>
+      </div>
+      <div class="persona-fomo__item persona-fomo__item--highlight">
+        <span class="persona-fomo__item-icon">🇻🇳 🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+        <span>Chuyển đổi ngôn ngữ Anh-Việt không hề vấp váp (Code-switching)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ PAIN POINTS ╔═══════════ -->
+  <section class="section persona-pains" id="personaPains">
+    <div class="section__header reveal">
+      <p class="section__label">BẠN ĐANG GẶP RẮC RỐI VỚI TTS HIỆN TẠI?</p>
+      <h2 class="section__title">Âm thanh tệ và giá thì trên trời?</h2>
+    </div>
+    <div class="persona-pains__grid">
+      <div class="persona-pain-card reveal">
+        <span class="persona-pain-card__icon">💸</span>
+        <h3 class="persona-pain-card__title">Chi Phí API Khổng Lồ</h3>
+        <p class="persona-pain-card__desc">Sử dụng Google, AWS hay ElevenLabs khiến hóa đơn hàng tháng phình to khi số lượng người dùng tăng lên. Mỗi giây phát ra âm thanh đều tính phí.</p>
+      </div>
+      <div class="persona-pain-card reveal">
+        <span class="persona-pain-card__icon">🤖</span>
+        <h3 class="persona-pain-card__title">Đọc Tiếng Anh Như Robot</h3>
+        <p class="persona-pain-card__desc">Các mô hình TTS tiếng Việt hiện tại thường phát âm từ tiếng Anh cực kỳ máy móc, gượng gạo, làm hỏng hoàn toàn trải nghiệm nghe của người dùng.</p>
+      </div>
+      <div class="persona-pain-card reveal">
+        <span class="persona-pain-card__icon">⏱️</span>
+        <h3 class="persona-pain-card__title">Clone Giọng Mất Hàng Giờ</h3>
+        <p class="persona-pain-card__desc">Muốn tạo ra một giọng nói riêng cho thương hiệu? Bạn phải ngồi thu âm hàng giờ đồng hồ và chờ đợi hệ thống huấn luyện mệt mỏi.</p>
+      </div>
+      <div class="persona-pain-card reveal">
+        <span class="persona-pain-card__icon">🔒</span>
+        <h3 class="persona-pain-card__title">Rủi Ro Bảo Mật Dữ Liệu</h3>
+        <p class="persona-pain-card__desc">Mỗi một dòng văn bản gửi lên nền tảng đám mây của bên thứ ba là một nguy cơ rò rỉ dữ liệu nội bộ của doanh nghiệp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ THE GUIDE (SOLUTIONS) ╔═══════════ -->
+  <section class="section persona-guide" id="personaGuide">
+    <div class="persona-guide__container reveal">
+      <div class="persona-guide__badge">CHÌA KHÓA GIẢI QUYẾT</div>
+      <h2 class="persona-guide__title">Mang toàn bộ sức mạnh AI về máy của bạn.</h2>
+      <p class="persona-guide__desc">VieNeu-TTS không chỉ là một công cụ, nó là "bộ não" âm thanh độc lập của bạn. Với công nghệ Turbo GGUF và ONNX, mô hình được tối ưu nhỏ gọn để chạy siêu tốc trên bất kỳ thiết bị nào, mang lại chất lượng giọng nói mượt mà, cảm xúc không thua kém con người.</p>
+      
+      <div class="persona-solutions__grid" style="margin-top: 40px;">
+        <div class="persona-solution-card reveal">
+          <div class="persona-solution-card__skill">Clone Giọng 3 Giây</div>
+          <p class="persona-solution-card__benefit">Chỉ cần đưa cho AI 3-5 giây âm thanh mẫu (ngay trên bản Turbo). Hệ thống lập tức học và tái tạo lại chất giọng 100%.</p>
+        </div>
+        <div class="persona-solution-card reveal">
+          <div class="persona-solution-card__skill">Song Ngữ Thần Thánh</div>
+          <p class="persona-solution-card__benefit">Khả năng "Code-switching" đẳng cấp. Đang nói tiếng Việt chèn từ tiếng Anh tự nhiên như người bản xứ giao tiếp.</p>
+        </div>
+        <div class="persona-solution-card reveal">
+          <div class="persona-solution-card__skill">Đóng Dấu Bản Quyền (Watermark)</div>
+          <p class="persona-solution-card__benefit">Hệ thống nhúng dấu ấn AI ẩn vào âm thanh, giúp bảo vệ bản quyền và chống giả mạo (Deepfake) trong thời đại số.</p>
+        </div>
+        <div class="persona-solution-card reveal">
+          <div class="persona-solution-card__skill">Python SDK Tối Giản</div>
+          <p class="persona-solution-card__benefit">Nhúng thẳng vào ứng dụng của bạn chỉ với `pip install vieneu` và 3 dòng code. Hỗ trợ chạy Server (Remote API) hoặc Local CPU/GPU.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ 3-STEP PLAN ╔═══════════ -->
+  <section class="section persona-plan" id="personaPlan">
+    <div class="section__header reveal">
+      <p class="section__label">DỄ DÀNG ĐẾN KHÓ TIN</p>
+      <h2 class="section__title">3 Bước Để Tạo Ra Giọng Nói Đầu Tiên</h2>
+    </div>
+    <div class="persona-plan__grid">
+      <div class="persona-plan__step reveal">
+        <div class="persona-plan__num">1</div>
+        <h3 class="persona-plan__steptitle">Cài đặt 1 Click</h3>
+        <p class="persona-plan__stepdesc">Dùng `uv sync` hoặc `pip install vieneu`. Không cần setup rườm rà. Máy yếu cũng chạy mượt nhờ bản Turbo CPU.</p>
+      </div>
+      <!-- Connector SVG Arrow -->
+      <svg class="persona-plan__connector persona-plan__connector--1" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 16H26M26 16L18 8M26 16L18 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <div class="persona-plan__step reveal">
+        <div class="persona-plan__num">2</div>
+        <h3 class="persona-plan__steptitle">Nạp Mẫu Giọng Của Bạn</h3>
+        <p class="persona-plan__stepdesc">Quẳng vào hệ thống một đoạn âm thanh 5 giây của sếp, của bạn, hoặc của bất kỳ ai.</p>
+      </div>
+      <!-- Connector SVG Arrow -->
+      <svg class="persona-plan__connector persona-plan__connector--2" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 16H26M26 16L18 8M26 16L18 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <div class="persona-plan__step reveal">
+        <div class="persona-plan__num">3</div>
+        <h3 class="persona-plan__steptitle">Phát Ra Âm Thanh Mới</h3>
+        <p class="persona-plan__stepdesc">Gõ văn bản vào và nhận lại file âm thanh chuẩn 24kHz. Triển khai API gọi từ xa cho website hay app của bạn ngay lập tức.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ BEFORE / AFTER ╔═══════════ -->
+  <section class="section persona-ba" id="personaBA">
+    <div class="section__header reveal">
+      <p class="section__label">BẢNG SO SÁNH</p>
+      <h2 class="section__title">VieNeu-TTS vs Đám Mây</h2>
+    </div>
+    <div class="persona-ba__container reveal">
+      <div class="persona-ba__col persona-ba__col--before">
+        <h3 class="persona-ba__heading">❌ Sử Dụng Cloud/API</h3>
+        <ul>
+          <li>Tính tiền theo từng lượt gọi API / độ dài ký tự</li>
+          <li>Kẹt mạng là hệ thống chết đứng</li>
+          <li>Khách hàng đọc thông tin bảo mật bị gửi đi</li>
+          <li>Clone giọng phải qua nhiều bước thẩm định phức tạp</li>
+          <li>Phát âm tiếng Anh / thuật ngữ chuyên ngành bị méo tiếng</li>
+        </ul>
+      </div>
+      <div class="persona-ba__col persona-ba__col--after">
+        <h3 class="persona-ba__heading">✅ VieNeu-TTS (On-Device)</h3>
+        <ul>
+          <li><strong>Mua 0 đồng, Dùng 1 tỷ lần</strong></li>
+          <li>Chạy offline hoàn toàn không cần Internet</li>
+          <li>Dữ liệu khách hàng nằm nguyên tại máy chủ của bạn</li>
+          <li>Clone giọng tự động tức thì với Zero-Shot</li>
+          <li>Chuyển ngữ mượt mà (Code-switching) tự nhiên</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ CTA (ENHANCED) ╔═══════════ -->
+  <section class="section persona-cta--enhanced" id="personaCta">
+    <div class="persona-cta__content reveal">
+      <h2 class="persona-cta__title">Thoát khỏi sự lệ thuộc vào API nước ngoài.<br>Thử nghiệm ngay trong trình duyệt.</h2>
+      <p class="persona-cta__sub">Mã nguồn mở. Dễ dàng triển khai. Cộng đồng hỗ trợ mạnh mẽ.</p>
+      <div class="persona-cta__buttons" style="margin-top: 30px;">
+        <a href="https://github.com/pnnbao97/VieNeu-TTS" target="_blank" class="persona-cta__pulse-btn">Tải Source Code Trên GitHub →</a>
+        <a href="https://colab.research.google.com/drive/1V1DjG-KdmurCAhvXrxxTLsa9tteDxSVO?usp=sharing" target="_blank" class="persona-cta__secondary">Thử Ngay Trên Google Colab</a>
+      </div>
+      <div class="persona-trust-strip">
+        <span class="persona-trust-strip__item"><span class="persona-trust-strip__item-icon">✓</span><span>Hỗ trợ GGUF (CPU) chạy cực nhẹ</span></span>
+        <span class="persona-trust-strip__item"><span class="persona-trust-strip__item-icon">✓</span><span>Bản quyền âm thanh bảo mật</span></span>
+        <span class="persona-trust-strip__item"><span class="persona-trust-strip__item-icon">✓</span><span>Cộng đồng hỗ trợ Discord</span></span>
+      </div>
+    </div>
+  </section>a-i18n="personas.details.pm.ctaSecondary">📖 Read Our Story</a>
+      </div>
+      <div class="persona-trust-strip">
+        <span class="persona-trust-strip__item"><span class="persona-trust-strip__item-icon">✓</span><span data-i18n="personas.for_pms_auto_31">100% Free &amp; Open Source</span></span>
+        <span class="persona-trust-strip__item"><span class="persona-trust-strip__item-icon">✓</span><span data-i18n="personas.for_pms_auto_16">Gets Smarter Every Day</span></span>
+        <span class="persona-trust-strip__item"><span class="persona-trust-strip__item-icon">✓</span><span data-i18n="personas.for_pms_auto_16">Built by a PM, for Everyone</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════╗ FOOTER ╔═══════════ -->
+  <footer class="footer" id="siteFooter">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__logo">⚡ CodyMaster Kit</span>
+        <p class="footer__tagline" data-i18n="footer.tagline">Turn Ideas into Products 10x Faster</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title" data-i18n="footer.product">Product</h4>
+        <a href="brain.html" data-i18n="nav.brain">Brain</a>
+        <a href="skills.html" data-i18n="nav.skills">Skills</a>
+        <a href="start.html" data-i18n="nav.getStarted">Get Started</a>
+        <a href="/docs/" data-i18n="nav.docs">Docs</a>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title" data-i18n="footer.whyUs">Why Us</h4>
+        <a href="why-cody-master.html" data-i18n="nav.whyCodyMaster">Why CodyMaster</a>
+        <a href="vs-others.html" data-i18n="nav.vsOthers">vs Others</a>
+        <a href="story.html" data-i18n="nav.story">Our Story</a>
+        <a href="cli.html" data-i18n="nav.cli">CLI</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title" data-i18n="footer.community">Community</h4>
+        <a href="https://github.com/tody-agent/codymaster" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Discord</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p data-i18n="footer.copy">© 2026 CodyMaster Kit. Free & Open Source.</p>
+      <p class="footer__made" data-i18n="footer.madeWith">Made with ❤️ and AI</p>
+    </div>
+  </footer>
+
+  <script src="js/sanitize.js"></script>
+  <script src="js/kit.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+
+
+<script src="js/ga-events.js"></script>
+</body></html>

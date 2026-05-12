@@ -1,0 +1,13 @@
+{
+  "name": "codymaster-landing",
+  "version": "1.0.0",
+  "description": "CodyMaster Landing Page Suite",
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy": "npx wrangler pages deploy . --project-name=codymaster-landing"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "wrangler": "^3.0.0"
+  }
+}
