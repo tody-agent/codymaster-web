@@ -1,0 +1,83 @@
+@import "./shared.css";
+
+/* vibe-coding.html */
+.vc-mindset, .vc-pitfalls { padding: 64px 0; }
+.vc-workflow { padding: 64px 0; }
+
+.mindset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+.mindset-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+.mindset-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.mindset-card h3 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 10px; }
+.mindset-card p { color: var(--fg-soft); font-size: 0.93rem; line-height: 1.65; }
+
+/* workflow */
+.workflow-steps { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+.workflow-step {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  transition: border-color 0.15s;
+}
+.workflow-step:hover { border-color: oklch(64% 0.13 28 / 0.4); }
+.ws-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.ws-body h3 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 8px; }
+.ws-body p { color: var(--fg-soft); font-size: 0.93rem; line-height: 1.6; margin-bottom: 10px; }
+.ws-skill { font-size: 12px; color: var(--muted); }
+.ws-skill code {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+/* pitfalls */
+.pitfalls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+.pitfall-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+}
+.pitfall-icon { font-size: 1.8rem; margin-bottom: 12px; }
+.pitfall-card h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 8px; }
+.pitfall-card p { color: var(--fg-soft); font-size: 0.9rem; line-height: 1.6; }
