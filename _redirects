@@ -1,0 +1,2 @@
+# Redirect docs to the built VitePress output
+/docs/*   /dist/docs/*   200

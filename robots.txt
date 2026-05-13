@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://codymaster.todyle.com/sitemap.xml
+Sitemap: https://cody.todyle.com/docs/sitemap.xml

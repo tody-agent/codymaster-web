@@ -1,294 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skill Library — 34+ AI Experts in One Install</title>
-  <meta name="description" content="Browse all 34+ CodyMaster skills — from ideation to deployment. Each skill is a dedicated AI expert for a specific task.">
-  <link rel="canonical" href="https://cody.todyle.com/skills.html">
-  <meta property="og:title" content="Skill Library — 34+ AI Experts in One Install">
-  <meta property="og:description" content="Browse all 34+ CodyMaster skills — from ideation to deployment.">
-  <meta property="og:url" content="https://cody.todyle.com/skills.html">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/shared.css">
-  <link rel="stylesheet" href="assets/css/skills.css">
-  <link rel="stylesheet" href="assets/css/growth-sheet.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Skills Catalog — All 50+ CodyMaster Skills by Category | CodyMaster</title>
+<meta name="description" content="Browse all 50+ CodyMaster skills organized by category: Planning, Design, Building, Safety, Knowledge, Content, Growth. Install exactly what you need." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/pages/skills.css">
 </head>
 <body data-page="skills">
+
 <div id="cm-header-mount"></div>
 
-<!-- ═══════ HERO ═══════ -->
-<section class="skills-hero">
+<section class="page-hero">
   <div class="container">
-    <span class="skills-hero__label">Skill Library</span>
-    <h1 class="skills-hero__title">34 Dedicated AI Experts.<br>One Install.</h1>
-    <p class="skills-hero__sub">Every skill is a specialized AI expert — from ideation to deployment. Search, filter, and discover the right one for your task.</p>
-    <div class="skills-search">
-      <svg class="skills-search__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" id="skillSearch" class="skills-search__input" placeholder="Search skills... (e.g. deploy, test, design)">
+    <div class="hero-badge">Skills Catalog</div>
+    <h1>50+ skills.<br><em>One install.</em></h1>
+    <p class="page-hero-sub">Browse every skill by category. Each one is a lesson learned the hard way — so you don't have to.</p>
+  </div>
+</section>
+
+<section class="skills-section">
+  <div class="container">
+
+    <div class="skills-filter" role="group" aria-label="Filter skills by category">
+      <button class="filter-btn active" data-cat="all" id="filter-all">All</button>
+      <button class="filter-btn" data-cat="planning" id="filter-planning">Planning</button>
+      <button class="filter-btn" data-cat="design" id="filter-design">Design</button>
+      <button class="filter-btn" data-cat="building" id="filter-building">Building</button>
+      <button class="filter-btn" data-cat="safety" id="filter-safety">Safety</button>
+      <button class="filter-btn" data-cat="knowledge" id="filter-knowledge">Knowledge</button>
+      <button class="filter-btn" data-cat="content" id="filter-content">Content</button>
+      <button class="filter-btn" data-cat="growth" id="filter-growth">Growth</button>
+    </div>
+
+    <div class="skills-grid" id="skills-grid">
+
+      <!-- Planning -->
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-planning</div><div class="skill-desc">Explores intent and requirements before coding. Forces the AI to think before building.</div><div class="skill-cat cat-planning">Planning</div></div>
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-brainstorm-idea</div><div class="skill-desc">Strategic analysis using Design Thinking + 9 Windows (TRIZ). Multi-dimensional evaluation before any build.</div><div class="skill-cat cat-planning">Planning</div></div>
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-jtbd</div><div class="skill-desc">Jobs-To-Be-Done framework. Uncovers the functional, social, and emotional jobs your product is hired to do.</div><div class="skill-cat cat-planning">Planning</div></div>
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-execution</div><div class="skill-desc">Runs implementation plans — batch execution with checkpoints, subagents, or parallel dispatch.</div><div class="skill-cat cat-planning">Planning</div></div>
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-continuity</div><div class="skill-desc">Working memory. Maintains context across sessions via CONTINUITY.md. No more re-explaining your project.</div><div class="skill-cat cat-planning">Planning</div></div>
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-status</div><div class="skill-desc">Quick progress summary. See what's done, what's next, and what's blocked — at a glance.</div><div class="skill-cat cat-planning">Planning</div></div>
+      <div class="skill-card" data-cat="planning"><div class="skill-name">cm-sprint-bus</div><div class="skill-desc">Full sprint pipeline: brainstorm → plan → design → TDD → build → review → QA → security → ship → retro.</div><div class="skill-cat cat-planning">Planning</div></div>
+
+      <!-- Design -->
+      <div class="skill-card" data-cat="design"><div class="skill-name">cm-design-system</div><div class="skill-desc">Ultimate Design System Intelligence. Extracts tokens from any URL, manages multi-page design systems.</div><div class="skill-cat cat-design">Design</div></div>
+      <div class="skill-card" data-cat="design"><div class="skill-name">cm-cro-methodology</div><div class="skill-desc">Audits landing pages and runs evidence-based A/B tests. Funnel mapping, persuasion assets, objection handling.</div><div class="skill-cat cat-design">Design</div></div>
+      <div class="skill-card" data-cat="design"><div class="skill-name">cm-booking-calendar</div><div class="skill-desc">Booking & Calendar CRO Engine. Scheduling, .ics download, Google Calendar integration.</div><div class="skill-cat cat-design">Design</div></div>
+      <div class="skill-card" data-cat="design"><div class="skill-name">cm-growth-hacking</div><div class="skill-desc">Bottom-sheet popups, booking CTAs, lead capture, surveys, re-engagement. Zero deps, any site.</div><div class="skill-cat cat-design">Design</div></div>
+      <div class="skill-card" data-cat="design"><div class="skill-name">cm-readit</div><div class="skill-desc">Turn any website into an audio-enabled experience. TTS reading mode, pre-recorded MP3, Voice CRO triggers.</div><div class="skill-cat cat-design">Design</div></div>
+
+      <!-- Building -->
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-tdd</div><div class="skill-desc">Test-Driven Development enforcer. Writes tests first, every time. No test = no build.</div><div class="skill-cat cat-building">Building</div></div>
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-debugging</div><div class="skill-desc">Systematic debugging protocol. Traces root cause before proposing any fix. No guessing.</div><div class="skill-cat cat-building">Building</div></div>
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-code-review</div><div class="skill-desc">Full review lifecycle — request reviews, handle feedback, complete branch integration.</div><div class="skill-cat cat-building">Building</div></div>
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-clean-code</div><div class="skill-desc">Code hygiene gate. Detects dead code, duplicates, naming issues, and code smells. TRIZ-powered.</div><div class="skill-cat cat-building">Building</div></div>
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-codeintell</div><div class="skill-desc">Unified code intelligence. Skeleton Index + AST knowledge graph + architecture diagrams. 95% token compression.</div><div class="skill-cat cat-building">Building</div></div>
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-safe-i18n</div><div class="skill-desc">Mass-convert hardcoded strings to i18n t() calls. Multi-pass batching, parallel-per-language dispatch, 8 audit gates.</div><div class="skill-cat cat-building">Building</div></div>
+      <div class="skill-card" data-cat="building"><div class="skill-name">cm-project-bootstrap</div><div class="skill-desc">New project setup from day 0. Design system, staging+production, i18n, SEO, AGENTS.md, test infrastructure.</div><div class="skill-cat cat-building">Building</div></div>
+
+      <!-- Safety -->
+      <div class="skill-card" data-cat="safety"><div class="skill-name">cm-safe-deploy</div><div class="skill-desc">Multi-gate deploy pipeline: test gates → build verification → frontend safety → rollback strategy.</div><div class="skill-cat cat-safety">Safety</div></div>
+      <div class="skill-card" data-cat="safety"><div class="skill-name">cm-identity-guard</div><div class="skill-desc">Verify and lock project identity before ANY deploy. Prevents wrong-account deploys and cross-project leaks.</div><div class="skill-cat cat-safety">Safety</div></div>
+      <div class="skill-card" data-cat="safety"><div class="skill-name">cm-quality-gate</div><div class="skill-desc">Enforces test gates, evidence-based verification, and frontend safety checks before any deploy.</div><div class="skill-cat cat-safety">Safety</div></div>
+      <div class="skill-card" data-cat="safety"><div class="skill-name">cm-guardian-runtime</div><div class="skill-desc">Blocks destructive commands. Freeze checks for irreversible operations.</div><div class="skill-cat cat-safety">Safety</div></div>
+
+      <!-- Knowledge -->
+      <div class="skill-card" data-cat="knowledge"><div class="skill-name">cm-dockit</div><div class="skill-desc">Knowledge systematization engine. Generates Personas, JTBD, Process Flows, API references from your codebase.</div><div class="skill-cat cat-knowledge">Knowledge</div></div>
+      <div class="skill-card" data-cat="knowledge"><div class="skill-name">cm-deep-search</div><div class="skill-desc">Semantic search bridge. Detects oversized codebases and suggests local vector search via tobi/qmd.</div><div class="skill-cat cat-knowledge">Knowledge</div></div>
+      <div class="skill-card" data-cat="knowledge"><div class="skill-name">cm-notebooklm</div><div class="skill-desc">Sync high-value dev knowledge into Google NotebookLM for cloud recall, podcasts, and flashcards.</div><div class="skill-cat cat-knowledge">Knowledge</div></div>
+      <div class="skill-card" data-cat="knowledge"><div class="skill-name">cm-retro-cli</div><div class="skill-desc">Sprint retrospective logger. Appends operational learnings as structured JSONL to the project retro log.</div><div class="skill-cat cat-knowledge">Knowledge</div></div>
+
+      <!-- Content -->
+      <div class="skill-card" data-cat="content"><div class="skill-name">cm-content-factory</div><div class="skill-desc">Self-learning SEO content pipeline. Multi-agent queue, research → write → audit → publish at scale.</div><div class="skill-cat cat-content">Content</div></div>
+      <div class="skill-card" data-cat="content"><div class="skill-name">cm-auto-publisher</div><div class="skill-desc">Bridges AI agents to the Content Factory Router. Publish markdown articles with rich media to any Astro site.</div><div class="skill-cat cat-content">Content</div></div>
+      <div class="skill-card" data-cat="content"><div class="skill-name">cm-ads-tracker</div><div class="skill-desc">End-to-end ad tracking: Meta Pixel+CAPI, TikTok Events API, Google Ads Enhanced Conversions, GTM.</div><div class="skill-cat cat-content">Content</div></div>
+      <div class="skill-card" data-cat="content"><div class="skill-name">cm-google-form</div><div class="skill-desc">Google App Script form-to-sheet with auto-retry, toast notifications, and Zalo fallback.</div><div class="skill-cat cat-content">Content</div></div>
+
+      <!-- Growth -->
+      <div class="skill-card" data-cat="growth"><div class="skill-name">cm-skill-evolution</div><div class="skill-desc">Repair or extend CodyMaster skills. FIX, DERIVED, and CAPTURED modes grounded in current repo tooling.</div><div class="skill-cat cat-growth">Growth</div></div>
+      <div class="skill-card" data-cat="growth"><div class="skill-name">cm-skill-chain</div><div class="skill-desc">Compose skills into automated pipelines. One task triggers multi-skill workflows with progress tracking.</div><div class="skill-cat cat-growth">Growth</div></div>
+      <div class="skill-card" data-cat="growth"><div class="skill-name">cm-autopilot</div><div class="skill-desc">Conversational CLI for non-technical users. Spawn parallel AI tasks supervised by a visual dashboard.</div><div class="skill-cat cat-growth">Growth</div></div>
+      <div class="skill-card" data-cat="growth"><div class="skill-name">cm-reactor</div><div class="skill-desc">Strategic codebase re-direction when requirements change or tech debt blocks progress. TRIZ-powered pivot.</div><div class="skill-cat cat-growth">Growth</div></div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══════ FILTER PILLS ═══════ -->
-<div class="skills-filters" id="skillFilters"></div>
-<p class="skills-count" id="skillCount"></p>
-
-<!-- ═══════ SKILL GRID ═══════ -->
-<div class="skills-grid" id="skillsGrid"></div>
-
-<!-- ═══════ SKILL CHAINS ═══════ -->
-<section class="chains-section">
-  <div class="container section-header" style="text-align:center;">
-    <span class="section-label">Skill Chains</span>
-    <h2 class="section-title">Automated Multi-Skill Pipelines</h2>
-    <p class="section-sub" style="margin:0 auto;">One task triggers multi-skill workflows with progress tracking and auto-detection.</p>
-  </div>
-  <div class="chains-grid">
-    <!-- Feature Development -->
-    <div class="chain-card">
-      <div class="chain-card__title">Feature Development</div>
-      <div class="chain-card__desc">Build new features end-to-end with quality gates at every step.</div>
-      <div class="chain-flow">
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>cm-planning</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>cm-execution</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>cm-quality-gate</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>cm-safe-deploy</div>
-      </div>
-    </div>
-    <!-- Bug Fix -->
-    <div class="chain-card">
-      <div class="chain-card__title">Bug Fix</div>
-      <div class="chain-card__desc">Fix production bugs with root cause analysis and regression tests.</div>
-      <div class="chain-flow">
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>cm-debugging</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>cm-tdd</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>cm-quality-gate</div>
-      </div>
-    </div>
-    <!-- Project Bootstrap -->
-    <div class="chain-card">
-      <div class="chain-card__title">New Project</div>
-      <div class="chain-card__desc">Bootstrap a production-ready project with design system, i18n, and deploy pipeline.</div>
-      <div class="chain-flow">
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>cm-project-bootstrap</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>cm-design-system</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>cm-safe-i18n</div>
-        <div class="chain-arrow">→</div>
-        <div class="chain-step"><svg class="chain-step__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>cm-safe-deploy</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ START WITH JUST 3 ═══════ -->
-<section class="start3-section">
-  <div class="container section-header" style="text-align:center;">
-    <span class="section-label">New to CodyMaster?</span>
-    <h2 class="section-title">Start with Just 3 Skills</h2>
-    <p class="section-sub" style="margin:0 auto;">Master these three and you'll cover 80% of your daily workflow.</p>
-  </div>
-  <div class="start3-grid">
-    <div class="start3-card">
-      <div class="start3-card__step">1</div>
-      <div class="start3-card__name">cm-start</div>
-      <div class="start3-card__tagline">Quick Start</div>
-      <div class="start3-card__desc">Trigger an instant execution macro that auto-detects your project context. No verbose prompts needed — just start.</div>
-    </div>
-    <div class="start3-card">
-      <div class="start3-card__step">2</div>
-      <div class="start3-card__name">cm-planning</div>
-      <div class="start3-card__tagline">Implementation Planning</div>
-      <div class="start3-card__desc">Force AI to create a structural blueprint before coding. Breaks monolithic requests into micro-manageable steps.</div>
-    </div>
-    <div class="start3-card">
-      <div class="start3-card__step">3</div>
-      <div class="start3-card__name">cm-continuity</div>
-      <div class="start3-card__tagline">4-Tier Working Memory</div>
-      <div class="start3-card__desc">Bridges sessions with Ebbinghaus-inspired memory. AI remembers what you did yesterday — no context reloading friction.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ CROSS-LINKS ═══════ -->
-<section class="crosslinks-section">
-  <div class="container section-header" style="text-align:center;">
-    <span class="section-label">Explore More</span>
-    <h2 class="section-title">See CodyMaster in Action</h2>
-  </div>
-  <div class="crosslinks-grid">
-    <a href="the-problem.html" class="crosslink-card">
-      <div class="crosslink-card__icon">💡</div>
-      <div><div class="crosslink-card__text">Why CodyMaster</div><div class="crosslink-card__sub">The philosophy behind the kit</div></div>
-    </a>
-    <a href="demo.html" class="crosslink-card">
-      <div class="crosslink-card__icon">⚡</div>
-      <div><div class="crosslink-card__text">How It Works</div><div class="crosslink-card__sub">From idea to deploy</div></div>
-    </a>
-    <a href="the-solution.html" class="crosslink-card">
-      <div class="crosslink-card__icon">🧩</div>
-      <div><div class="crosslink-card__text">What's Inside</div><div class="crosslink-card__sub">Components & architecture</div></div>
-    </a>
-    <a href="compare.html" class="crosslink-card">
-      <div class="crosslink-card__icon">🔄</div>
-      <div><div class="crosslink-card__text">Compare</div><div class="crosslink-card__sub">vs Lovable, Bolt, Replit, Cursor</div></div>
-    </a>
+<section class="page-cta bg-warm">
+  <div class="container" style="text-align:center;">
+    <div class="section-label">Ready to Install</div>
+    <h2 class="section-title">Get all 50+ skills in one command.</h2>
+    <p class="section-sub" style="margin:0 auto 32px;">The installer detects your AI tools and installs the right skills to all of them.</p>
+    <a href="get-started.html" class="cta-btn cta-primary">Get CodyMaster Free &rarr;</a>
+    <a href="/docs/" class="cta-btn cta-secondary" target="_blank" rel="noopener">Read the Docs</a>
   </div>
 </section>
 
 <div id="cm-footer-mount"></div>
-<script src="assets/js/components.js"></script>
-<script src="assets/js/growth-sheet.js"></script>
-
+<script src="assets/js/components.js" defer></script>
 <script>
-(function () {
-  'use strict';
-
-  /* ── Skill Data (34 active skills, accurate as of v6.0.0) ── */
-  var SKILLS = [
-    // Engineering Swarm (8)
-    { id: 'cm-tdd', name: 'cm-tdd', category: 'Engineering', description: 'Test-Driven Development — Red-Green-Refactor cycle. No production code without a failing test first.', whenToUse: 'Core logic, payment gateways, complex state, critical endpoints.' },
-    { id: 'cm-debugging', name: 'cm-debugging', category: 'Engineering', description: '5-phase root cause investigation — reproduce, isolate, diagnose, fix, record. Memory integrity check before blaming code.', whenToUse: 'Bug, error, fix, broken, test failure, unexpected behavior.' },
-    { id: 'cm-quality-gate', name: 'cm-quality-gate', category: 'Engineering', description: '4-gate verification: pre-deploy testing, evidence before claims, frontend integrity, working memory update. No pass = no deploy.', whenToUse: 'Deploy, ship, verify, quality gate, completion claim.' },
-    { id: 'cm-code-review', name: 'cm-code-review', category: 'Engineering', description: 'Full review lifecycle — request reviews, handle feedback with technical rigor, complete branch integration.', whenToUse: 'Review, PR, feedback, branch, task complete.' },
-    { id: 'cm-codeintell', name: 'cm-codeintell', category: 'Engineering', description: 'Skeleton Index (<4s) + AST knowledge graph + architecture diagrams + smart context builder. 95% token compression.', whenToUse: 'Understand codebase, call graph, impact, architecture.' },
-    { id: 'cm-clean-code', name: 'cm-clean-code', category: 'Engineering', description: '7-point hygiene checklist: dead code, unused imports, magic numbers, naming, SRP, DRY, nesting. TRIZ-powered.', whenToUse: 'Clean, dead code, refactor, code smell, messy code.' },
-    { id: 'cm-reactor', name: 'cm-reactor', category: 'Engineering', description: 'TRIZ-powered 5-phase protocol for pivoting large codebases. Strangler fig migration when architecture doesn\'t fit.', whenToUse: 'Rewrite, pivot, migrate, direction change, restructure.' },
-    { id: 'cm-guardian-runtime', name: 'cm-guardian-runtime', category: 'Engineering', description: 'Blocks destructive commands (rm -rf, DROP TABLE, git push --force). Path-check for allowed directories.', whenToUse: 'Destructive command, freeze check, safety guard.' },
-
-    // Operations Swarm (4)
-    { id: 'cm-safe-deploy', name: 'cm-safe-deploy', category: 'Operations', description: '8-gate deploy pipeline: secret scan, security scan, syntax, test suite, i18n parity, build, dist verify, deploy + smoke.', whenToUse: 'Deploy, staging, production, release, deployment infrastructure.' },
-    { id: 'cm-identity-guard', name: 'cm-identity-guard', category: 'Operations', description: 'Verify and lock project identity (GitHub, Cloudflare, Supabase) before ANY git push or deploy. Prevents wrong-account deploys.', whenToUse: 'Multi-account developers, git push, deploy, Cloudflare.' },
-    { id: 'cm-terminal', name: 'cm-terminal', category: 'Operations', description: 'Enforces clear progress logging, output reading, and error-stop behavior for ALL terminal commands.', whenToUse: 'Command, terminal, run, execute, build, test commands.' },
-    { id: 'cm-safe-i18n', name: 'cm-safe-i18n', category: 'Operations', description: 'Multi-pass batching (max 30 strings/batch), parallel-per-language dispatch, 8 audit gates, HTML integrity checks.', whenToUse: 'Translate, i18n, language, localize, extracting strings.' },
-
-    // Product Swarm (5)
-    { id: 'cm-brainstorm-idea', name: 'cm-brainstorm-idea', category: 'Product', description: 'Multi-dimensional evaluation using Design Thinking + 9 Windows (TRIZ) + Double Diamond. Outputs 2-3 qualified options.', whenToUse: 'Analyze, enhance, improve, initiative, complex changes.' },
-    { id: 'cm-planning', name: 'cm-planning', category: 'Product', description: 'Explores intent, requirements, and design before implementation. Phase A (Brainstorm) + Phase B (Write Plan as OpenSpec).', whenToUse: 'Plan, design, brainstorm, feature, multi-step task.' },
-    { id: 'cm-ux-master', name: 'cm-ux-master', category: 'Product', description: '48 UX Laws + 37 Design Tests + Figma/Stitch integration. Extract, analyze, and generate production-ready design systems.', whenToUse: 'UI, UX, design, interface, usability, design system.' },
-    { id: 'cm-dockit', name: 'cm-dockit', category: 'Product', description: 'Analyze codebases to generate Personas, JTBD, Process Flows, technical docs, SOPs, API references. SEO-optimized.', whenToUse: 'Docs, documentation, knowledge base, SOP, API reference.' },
-    { id: 'cm-project-bootstrap', name: 'cm-project-bootstrap', category: 'Product', description: 'Full project setup from scratch: identity lock, design system, staging+production, i18n from day 1, SEO, test infra, deploy pipeline.', whenToUse: 'New project, init, bootstrap, setup, starting from scratch.' },
-    { id: 'cm-design-system', name: 'cm-design-system', category: 'Product', description: 'Manage, extract, replicate, and improve UI design systems. Harvester v5 visual extraction. Stitch + Pencil.dev MCP.', whenToUse: 'Extract design from URL, create design system, analyze tokens.' },
-
-    // Orchestration Swarm (12)
-    { id: 'cm-execution', name: 'cm-execution', category: 'Orchestration', description: '6 execution modes: Batch, Subagent, Parallel, RARV (autonomous), TRIZ-Parallel, Party (persona rotation).', whenToUse: 'Execute, implement, plan, batch, subagent, parallel.' },
-    { id: 'cm-continuity', name: 'cm-continuity', category: 'Orchestration', description: '5-tier memory architecture via CONTINUITY.md. Smart Spine v5. MCP context server with 15 tools. Bridges sessions.', whenToUse: 'Memory, context, CONTINUITY, learnings, session start/end.' },
-    { id: 'cm-skill-index', name: 'cm-skill-index', category: 'Orchestration', description: '3-layer progressive disclosure: L1 index (~100 tok), L2 summary (~300 tok), L3 full SKILL.md. 90%+ token savings.', whenToUse: 'Which skill, skill list, discover, help, find skill.' },
-    { id: 'cm-skill-evolution', name: 'cm-skill-evolution', category: 'Orchestration', description: 'Three-mode loop: FIX (broken), DERIVED (MVP), CAPTURED (operational learning). Grounded in current repo tooling.', whenToUse: 'Repair skill, evolve skill, fix skill, derive skill.' },
-    { id: 'cm-skill-chain', name: 'cm-skill-chain', category: 'Orchestration', description: 'Compose skills into automated multi-step pipelines. 5 built-in chains. Context bus for inter-skill coordination.', whenToUse: 'Chain, pipeline, workflow, multi-step, end-to-end.' },
-    { id: 'cm-deep-search', name: 'cm-deep-search', category: 'Orchestration', description: 'Optional power-up for large projects (>200 files). Detects oversized codebases and suggests tobi/qmd for semantic search.', whenToUse: 'Semantic search, find docs, large codebase, qmd.' },
-    { id: 'cm-sprint-bus', name: 'cm-sprint-bus', category: 'Orchestration', description: 'Full sprint pipeline: brainstorm, plan, design, tdd, build, review, qa, security, ship, monitor, retro.', whenToUse: 'Sprint, full pipeline, brainstorm to ship.' },
-    { id: 'cm-autopilot', name: 'cm-autopilot', category: 'Orchestration', description: 'Conversational CLI for non-technical users. Translates user intent into parallel tasks. Dashboard at localhost:5050.', whenToUse: 'Non-technical user, conversational, parallel tasks.' },
-    { id: 'cm-how-it-work', name: 'cm-how-it-work', category: 'Orchestration', description: 'Complete guide to vibe coding with the full CM skill kit. Covers workflow, skills at each phase, 9 golden rules.', whenToUse: 'How does X work, explain, architecture overview, new to CM.' },
-    { id: 'cm-browse', name: 'cm-browse', category: 'Orchestration', description: 'Visual QA, screenshots, post-deploy smoke testing through a real browser with Playwright. HTTP API.', whenToUse: 'Visual QA, screenshots, post-deploy smoke, browser testing.' },
-    { id: 'cm-mcp-engineering', name: 'cm-mcp-engineering', category: 'Orchestration', description: 'MCP engineering bridge tools: cm_plan, cm_review, cm_qa, cm_deploy, cm_search, cm_memory_query.', whenToUse: 'MCP tools, engineering bridge, sprint state, review.' },
-    { id: 'cm-ecosystem-roadmap', name: 'cm-ecosystem-roadmap', category: 'Orchestration', description: 'CodyMaster skill ecosystem roadmap, marketplace, or distro validation. cm distro validate checks layout.', whenToUse: 'Marketplace, distro, skill ecosystem roadmap.' },
-
-    // Workflow Commands (3)
-    { id: 'cm-start', name: 'cm-start', category: 'Workflow', description: 'Entry point for CM workflow. Detects stack, tier, code intelligence. Routes to appropriate skill chain.', whenToUse: '/cm-start, start workflow, begin objective, new task.' },
-    { id: 'cm-status', name: 'cm-status', category: 'Workflow', description: 'Ultra-concise 1-2 sentence progress summary. What\'s done, what\'s next, any blockers.', whenToUse: '/cm-status, quick status, progress, what\'s next.' },
-    { id: 'cm-retro-cli', name: 'cm-retro-cli', category: 'Workflow', description: 'Append operational learnings as structured JSONL to project retro log at end of sprint.', whenToUse: 'Retro, end of sprint, operational learnings.' }
-  ];
-
-  var CATEGORIES = ['All', 'Engineering', 'Operations', 'Product', 'Orchestration', 'Workflow'];
-
-  var CATEGORY_TAG_CLASS = {
-    'Engineering':  'tag-engineering',
-    'Operations':   'tag-operations',
-    'Product':      'tag-product',
-    'Orchestration':'tag-orchestration',
-    'Workflow':     'tag-workflow'
-  };
-
-  var activeCategory = 'All';
-  var searchQuery = '';
-
-  /* ── Render Filter Pills ── */
-  function renderFilters() {
-    var container = document.getElementById('skillFilters');
-    if (!container) return;
-    container.innerHTML = '';
-    CATEGORIES.forEach(function (cat) {
-      var btn = document.createElement('button');
-      btn.className = 'skills-pill' + (cat === activeCategory ? ' active' : '');
-      btn.textContent = cat;
-      btn.addEventListener('click', function () {
-        activeCategory = cat;
-        renderFilters();
-        renderGrid();
+(function(){
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.skill-card');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const cat = btn.dataset.cat;
+      btns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      cards.forEach(function(c){
+        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
       });
-      container.appendChild(btn);
     });
-  }
-
-  /* ── Render Skill Grid ── */
-  function renderGrid() {
-    var container = document.getElementById('skillsGrid');
-    var countEl = document.getElementById('skillCount');
-    if (!container) return;
-
-    var filtered = SKILLS.filter(function (s) {
-      var matchCat = activeCategory === 'All' || s.category === activeCategory;
-      var q = searchQuery.toLowerCase();
-      var matchQ = !q || s.name.toLowerCase().indexOf(q) !== -1 || s.description.toLowerCase().indexOf(q) !== -1;
-      return matchCat && matchQ;
-    });
-
-    container.innerHTML = '';
-    filtered.forEach(function (skill) {
-      var tagClass = CATEGORY_TAG_CLASS[skill.category] || 'tag-devops';
-      var card = document.createElement('div');
-      card.className = 'skill-card';
-      card.innerHTML =
-        '<div class="skill-card__header">' +
-          '<span class="skill-card__name">' + esc(skill.name) + '</span>' +
-          '<span class="skill-card__tag ' + tagClass + '">' + esc(skill.category) + '</span>' +
-        '</div>' +
-        '<p class="skill-card__desc">' + esc(skill.description) + '</p>' +
-        (skill.whenToUse ? '<p class="skill-card__when">🎯 ' + esc(skill.whenToUse) + '</p>' : '');
-      container.appendChild(card);
-    });
-
-    if (countEl) {
-      countEl.innerHTML = 'Showing <span>' + filtered.length + '</span> of <span>' + SKILLS.length + '</span> skills';
-    }
-  }
-
-  function esc(s) {
-    var div = document.createElement('div');
-    div.appendChild(document.createTextNode(s));
-    return div.innerHTML;
-  }
-
-  /* ── Search ── */
-  function setupSearch() {
-    var input = document.getElementById('skillSearch');
-    if (!input) return;
-    var timer;
-    input.addEventListener('input', function () {
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        searchQuery = input.value;
-        renderGrid();
-      }, 150);
-    });
-  }
-
-  /* ── Init ── */
-  renderFilters();
-  renderGrid();
-  setupSearch();
+  });
 })();
 </script>
 </body>

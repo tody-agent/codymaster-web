@@ -43,10 +43,27 @@
         <div class="cm-sheet-eyebrow">Before you leave</div>
         <div class="cm-sheet-title">Get your AI a full&nbsp;senior team — free.</div>
         <p class="cm-sheet-sub">One install. 50+ skills. Works with Claude Code, Cursor, Gemini, and 11 more AI agents.</p>
+        
+        <div class="cm-sheet-prompt-card">
+          <div class="cm-sheet-prompt-header">
+            <span class="cm-sheet-prompt-badge">Universal Prompt</span>
+            <span class="cm-sheet-prompt-works">Works with Claude, Codex, Cursor, Gemini, and 10+ more</span>
+          </div>
+          <button class="cm-sheet-install" id="cm-sheet-copy-prompt" aria-label="Copy universal prompt" style="margin-bottom: 0;">
+            <span>Fetch and follow instructions from https://raw.githubusercontent.com/tody-agent/codymaster/main/INSTALL.md</span>
+            <span class="cm-copy-hint">Copy</span>
+          </button>
+        </div>
+
+        <div class="cm-sheet-or">
+          <span>OR INSTALL DIRECTLY</span>
+        </div>
+
         <button class="cm-sheet-install" id="cm-sheet-copy" aria-label="Copy install command">
           <span>npm install -g codymaster && cm</span>
-          <span class="cm-copy-hint">click to copy</span>
+          <span class="cm-copy-hint">Copy</span>
         </button>
+
         <div class="cm-sheet-ctas">
           <a href="/get-started.html" class="cm-sheet-btn-primary" id="cm-sheet-cta">Get Free →</a>
           <button class="cm-sheet-btn-ghost" id="cm-sheet-dismiss" aria-label="Close">Maybe later</button>
@@ -97,11 +114,24 @@
       if (e.changedTouches[0].clientY - startY > 60) closeSheet();
     }, { passive: true });
 
-    // Copy install command
-    document.getElementById('cm-sheet-copy').addEventListener('click', function () {
+    // Copy install command (Direct)
+    document.getElementById('cm-sheet-copy').addEventListener('click', function (e) {
       navigator.clipboard.writeText('npm install -g codymaster && cm').catch(function () {});
-      track('cro_sheet_copy', { trigger: trigger });
+      const hint = e.currentTarget.querySelector('.cm-copy-hint');
+      if (hint) { hint.textContent = 'Copied!'; setTimeout(() => hint.textContent = 'Copy', 2000); }
+      track('cro_sheet_copy', { trigger: trigger, type: 'direct' });
     });
+
+    // Copy install command (Prompt)
+    const promptBtn = document.getElementById('cm-sheet-copy-prompt');
+    if (promptBtn) {
+      promptBtn.addEventListener('click', function (e) {
+        navigator.clipboard.writeText('Fetch and follow instructions from https://raw.githubusercontent.com/tody-agent/codymaster/main/INSTALL.md').catch(function () {});
+        const hint = e.currentTarget.querySelector('.cm-copy-hint');
+        if (hint) { hint.textContent = 'Copied!'; setTimeout(() => hint.textContent = 'Copy', 2000); }
+        track('cro_sheet_copy', { trigger: trigger, type: 'prompt' });
+      });
+    }
 
     // CTA click tracking
     document.getElementById('cm-sheet-cta').addEventListener('click', function () {

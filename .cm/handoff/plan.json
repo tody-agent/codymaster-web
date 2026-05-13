@@ -1,24 +1,13 @@
 {
   "schema": "plan@1",
-  "goal": "Add 5 new landing pages (Compare, Vibe Coding, Skills, Methodology, Story) with dropdown header navigation to create a conversion funnel for CodyMaster",
+  "goal": "Build two-zone CodyMaster site: 7 HTML landing pages at cody.todyle.com + VitePress docs at cody.todyle.com/docs with bidirectional navigation and shared design tokens",
   "decisions": [
-    "CSS-only dropdown menus (no new JS dependency)",
-    "Single tabbed compare page (not separate sub-pages per competitor)",
-    "Cross-link to how-to/ guides from relevant pages",
-    "English only (no bilingual)",
-    "Pure static HTML/CSS/JS — matches existing tech stack",
-    "Header nav: Problem ▾ | Solution ▾ | Compare | Demo + external links",
-    "Mobile menu: accordion groups with expand/collapse toggles"
+    "VitePress base MUST stay '/docs/' — Cloudflare Pages constraint",
+    "All landing pages use partial injection pattern (components.js) not inline header/footer",
+    "index.html is the refactored codymaster-landing.html monolith",
+    "Phase A (HTML pages) before Phase B (VitePress theme sync)",
+    "Content extracted from codymaster-landing.html sections then expanded per page"
   ],
-  "first_tasks": ["1.1", "1.2", "1.3"],
-  "openspec_path": "openspec/changes/landing-pages-expansion/",
-  "content_sources": {
-    "compare": ["old-version/vs-lovable.html", "old-version/vs-bolt.html", "old-version/vs-replit.html", "old-version/vs-google-ai-studio.html", "old-version/vs-scrum.html"],
-    "vibe-coding": ["old-version/vibe-coding.html", "how-to/03-vibe-coding-loop.md"],
-    "skills": ["old-version/skills.html", "how-to/17-skill-chain-automation.md"],
-    "methodology": ["old-version/vs-scrum.html", "old-version/parallel-coding.html", "how-to/12-parallel-execution.md"],
-    "story": ["old-version/story.html", "old-version/why-cody-master.html"]
-  },
-  "phases": 8,
-  "estimated_hours": "8-10h"
+  "first_tasks": ["1.1 Copy codymaster-landing.html to index.html", "1.2 Replace inline header block with cm-header-mount div", "1.3 Replace inline footer block with cm-footer-mount div"],
+  "openspec_path": "openspec/changes/two-zone-site/"
 }

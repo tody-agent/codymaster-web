@@ -4,7 +4,9 @@
   "description": "CodyMaster Landing Page Suite",
   "scripts": {
     "dev": "npx serve .",
-    "deploy": "npx wrangler pages deploy . --project-name=codymaster-landing"
+    "dev:docs": "npm run dev --prefix docs-source",
+    "build:docs": "npm run build --prefix docs-source",
+    "deploy": "npm run build:docs && rm -rf docs && cp -r dist/docs docs && npx wrangler pages deploy . --project-name=codymaster-landing"
   },
   "devDependencies": {
     "serve": "^14.2.4",
