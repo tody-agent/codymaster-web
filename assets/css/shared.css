@@ -68,6 +68,7 @@ footer .container {
 
 @media (max-width: 600px) {
   section { padding: 56px 0; }
-  .footer-links { gap: 24px; }
+  .footer-links { flex-wrap: wrap; gap: 24px; }
+  .footer-col { min-width: 45%; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }

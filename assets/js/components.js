@@ -54,13 +54,12 @@
     });
   }
 
-  function initMobileAccordion() {
-    document.querySelectorAll('[data-mobile-toggle]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var sub = btn.nextElementSibling;
-        if (!sub) return;
-        btn.classList.toggle('open');
-        sub.classList.toggle('open');
+  function initMobileLinks() {
+    const menu = document.querySelector('[data-mobile-menu]');
+    if (!menu) return;
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('open');
       });
     });
   }
@@ -115,7 +114,7 @@
     // Apply active nav after header is in DOM
     applyActiveNav(document);
     initHamburger();
-    initMobileAccordion();
+    initMobileLinks();
     initScrollProgress();
   }
 

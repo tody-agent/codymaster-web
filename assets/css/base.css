@@ -172,45 +172,54 @@ img { max-width: 100%; display: block; }
   position: fixed; top: 56px; left: 0; right: 0;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 12px 24px 16px;
+  padding: 8px 16px 16px;
   box-shadow: 0 8px 32px oklch(22% 0.02 50 / 0.08);
   z-index: 99;
+  max-height: calc(100dvh - 56px);
+  overflow-y: auto;
 }
 .cm-mobile-menu.open { display: block; }
-.cm-mobile-menu a {
-  display: block; padding: 10px 12px; border-radius: 8px;
-  font-size: 14px; font-weight: 500; color: var(--fg-soft);
+.cm-mobile-menu > a {
+  display: block; padding: 13px 14px; border-radius: 10px;
+  font-size: 15px; font-weight: 500; color: var(--fg-soft);
   text-decoration: none; transition: background 0.12s;
+  min-height: 48px; display: flex; align-items: center;
 }
-.cm-mobile-menu a:hover { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
-.cm-mobile-menu a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
-.cm-mobile-menu .ext-links { display: flex; gap: 8px; flex-wrap: wrap; }
-.cm-mobile-menu .ext-links a { font-size: 13px; color: var(--muted); }
-.cm-mobile-menu .divider { height: 1px; background: var(--border); margin: 8px 0; }
+.cm-mobile-menu > a:hover { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.cm-mobile-menu > a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.cm-mobile-menu .ext-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.cm-mobile-menu .ext-links a {
+  font-size: 13px; color: var(--muted); padding: 10px 14px;
+  min-height: 44px; display: flex; align-items: center;
+}
+.cm-mobile-menu .divider { height: 1px; background: var(--border); margin: 6px 0; }
 
-/* ── Mobile Accordion ── */
+/* ── Mobile Groups — always expanded ── */
 .cm-mobile-group { margin-bottom: 2px; }
-.cm-mobile-toggle {
-  display: flex; align-items: center; justify-content: space-between;
-  width: 100%; padding: 10px 12px;
-  background: none; border: none; border-radius: 8px;
-  font-size: 14px; font-weight: 600; color: var(--fg-soft);
-  cursor: pointer; transition: background 0.12s, color 0.12s;
-  font-family: inherit;
+.cm-mobile-label {
+  display: block;
+  padding: 10px 14px 4px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+  font-family: var(--font-mono);
 }
-.cm-mobile-toggle:hover { background: var(--accent-soft); color: var(--accent); }
-.cm-mobile-toggle::after {
-  content: '▾'; font-size: 10px;
-  transition: transform 0.2s ease;
-}
-.cm-mobile-toggle.open::after { transform: rotate(180deg); }
+/* Hide the old toggle button — submenus are always visible */
+.cm-mobile-toggle { display: none; }
 .cm-mobile-sub {
-  display: none; padding-left: 12px;
+  display: block;
+  padding: 0 0 6px 0;
+  border-left: 2px solid var(--accent-soft);
+  margin: 0 0 4px 14px;
 }
-.cm-mobile-sub.open { display: block; }
 .cm-mobile-sub a {
-  font-size: 13px; padding: 8px 12px; color: var(--muted);
+  display: flex; align-items: center;
+  font-size: 14px; font-weight: 500; padding: 11px 14px;
+  color: var(--fg-soft); border-radius: 8px;
+  text-decoration: none; transition: background 0.12s, color 0.12s;
+  min-height: 44px;
 }
+.cm-mobile-sub a:hover { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.cm-mobile-sub a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 
 @media (max-width: 900px) {
   .cm-nav > a:not(.active) { padding: 6px 8px; font-size: 12px; }
